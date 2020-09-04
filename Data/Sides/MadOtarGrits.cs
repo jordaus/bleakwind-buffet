@@ -10,11 +10,18 @@ using BleakwindBuffet.Data.Enums;
  */
 namespace BleakwindBuffet.Data.Sides
 {
+    /// <summary>
+    /// represents grits class
+    /// </summary>
     public class MadOtarGrits
     {
         /// <summary>
         /// Price for side
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Throws if size in invalid
+        /// </exception>
+        /// <returns>price via size</returns>
         public double Price
         {
             get
@@ -23,7 +30,7 @@ namespace BleakwindBuffet.Data.Sides
                 {
                     return 1.22;
                 }
-                else if (size == Size.Small)
+                else if (size == Size.Medium)
                 {
                     return 1.58;
                 }
@@ -41,6 +48,10 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// Calories in side
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Throws if size in invalid
+        /// </exception>
+        /// <returns>calories via size</returns>
         public uint Calories
         {
             get
@@ -69,6 +80,10 @@ namespace BleakwindBuffet.Data.Sides
         /// </summary>
         private Size size = Size.Small;
 
+        /// <summary>
+        /// Size of side
+        /// </summary>
+        /// <returns>size</returns>
         public Size Size
         {
             get
@@ -84,6 +99,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// This basically checks what conditions you want on your side
         /// </summary>
+        /// <returns>instructions</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -97,7 +113,7 @@ namespace BleakwindBuffet.Data.Sides
         /// <summary>
         /// returns the string name
         /// </summary>
-        /// <returns></returns>
+        /// <returns>string of grits</returns>
         public override string ToString()
         {
             return size.ToString() + " Mad Otar Grits";

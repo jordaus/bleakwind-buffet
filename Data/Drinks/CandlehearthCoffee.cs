@@ -10,11 +10,18 @@ using System.Text;
  */
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// class represents coffee
+    /// </summary>
     public class CandlehearthCoffee
     {
         /// <summary>
         /// Price for drink
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Exception Thrown if size is not valid
+        /// </exception>
+        /// <returns>price of drink</returns>
         public double Price
         {
             get
@@ -23,7 +30,7 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     return 0.75;
                 }
-                else if (size == Size.Small)
+                else if (size == Size.Medium)
                 {
                     return 1.25;
                 }
@@ -41,6 +48,10 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Calories in drink
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Thrown if size is not valid
+        /// </exception>
+        /// <returns>calories of drink</returns>
         public uint Calories
         {
             get
@@ -67,6 +78,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Size of drink
         /// </summary>
+        /// <returns>size of drink</returns>
         private Size size = Size.Small;
 
         public Size Size
@@ -97,7 +109,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Sees if Caffine is needed
         /// </summary>
-        private bool decaf = false;
         public bool Decaf { get; set; } = false;
 
         /// <summary>
@@ -108,8 +119,8 @@ namespace BleakwindBuffet.Data.Drinks
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Add ice");
-                if (!RoomForCream) instructions.Add("Add cream");
+                if (Ice) instructions.Add("Add ice");
+                if (RoomForCream) instructions.Add("Add cream");
 
                 return instructions;
             }
@@ -121,7 +132,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns></returns>
         public override string ToString()
         {
-            if (decaf == false)
+            if (Decaf == false)
             {
                 return size.ToString() + " Candlehearth Coffee";
             }

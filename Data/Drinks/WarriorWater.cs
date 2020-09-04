@@ -10,26 +10,33 @@ using System.Text;
  */
 namespace BleakwindBuffet.Data.Drinks
 {
+    /// <summary>
+    /// class represents water
+    /// </summary>
     public class WarriorWater
     {
         /// <summary>
         /// Price for drink
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Throws if size is invalid with calories
+        /// </exception>
+        /// <returns>the price drink</returns>
         public double Price
         {
             get
             {
                 if (size == Size.Small)
                 {
-                    return 1.42;
+                    return 0;
                 }
-                else if (size == Size.Small)
+                else if (size == Size.Medium)
                 {
-                    return 1.74;
+                    return 0;
                 }
                 else if (size == Size.Large)
                 {
-                    return 2.07;
+                    return 0;
                 }
                 else
                 {
@@ -41,6 +48,10 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Calories in drink
         /// </summary>
+        /// <exception cref="System.NotImplementedException">
+        /// Throws if size is invalid with calories
+        /// </exception>
+        /// <returns>the amount of calories in drink</returns>
         public uint Calories
         {
             get
@@ -67,6 +78,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Size of drink
         /// </summary>
+        /// <returns>Size of Drink</returns>
         private Size size = Size.Small;
 
         public Size Size
@@ -96,13 +108,14 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// This basically checks what conditions you want in your drink
         /// </summary>
+        /// <returns>Special Instructions on drink</returns>
         public List<string> SpecialInstructions
         {
             get
             {
                 List<string> instructions = new List<string>();
                 if (!Ice) instructions.Add("Hold ice");
-                if (!Lemon) instructions.Add("Add lemon");
+                if (Lemon) instructions.Add("Add lemon");
 
                 return instructions;
             }
@@ -111,10 +124,10 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// returns the string name
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The string of the drink</returns>
         public override string ToString()
         {
-            return size.ToString() + " Warrior's Water";
+            return size.ToString() + " Warrior Water";
         }
     }
 }
