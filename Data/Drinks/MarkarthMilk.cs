@@ -5,12 +5,12 @@ using System.Text;
 
 /*
  * Author: Jordan Austin
- * Class name: AretinoAppleJuice.cs
- * Purpose: Class used to represent apple juice
+ * Class name: MarkarthMilk.cs
+ * Purpose: Class used to represent milk
  */
-namespace BleakwindBuffet.Data.Drink
+namespace BleakwindBuffet.Data.Drinks
 {
-    public class AretinoAppleJuice
+    public class MarkarthMilk
     {
         /// <summary>
         /// Price for drink
@@ -21,15 +21,15 @@ namespace BleakwindBuffet.Data.Drink
             {
                 if (size == Size.Small)
                 {
-                    return 0.62;
+                    return 1.05;
                 }
                 else if (size == Size.Small)
                 {
-                    return 0.87;
+                    return 1.11;
                 }
                 else if (size == Size.Large)
                 {
-                    return 1.01;
+                    return 1.22;
                 }
                 else
                 {
@@ -47,15 +47,15 @@ namespace BleakwindBuffet.Data.Drink
             {
                 if (size == Size.Small)
                 {
-                    return 44;
+                    return 56;
                 }
                 else if (size == Size.Medium)
                 {
-                    return 88;
+                    return 72;
                 }
                 else if (size == Size.Large)
                 {
-                    return 132;
+                    return 93;
                 }
                 else
                 {
@@ -80,7 +80,6 @@ namespace BleakwindBuffet.Data.Drink
                 size = value;
             }
         }
-
 
         /// <summary>
         /// Sees if theres Ice added
@@ -108,7 +107,7 @@ namespace BleakwindBuffet.Data.Drink
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + " Aretino Apple Juice";
+            return size.ToString() + " Markarth Milk";
         }
     }
 }

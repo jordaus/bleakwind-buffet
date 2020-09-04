@@ -5,12 +5,12 @@ using System.Text;
 
 /*
  * Author: Jordan Austin
- * Class name: WarriorWater.cs
- * Purpose: Class used to represent water
+ * Class name: AretinoAppleJuice.cs
+ * Purpose: Class used to represent apple juice
  */
-namespace BleakwindBuffet.Data.Drink
+namespace BleakwindBuffet.Data.Drinks
 {
-    public class WarriorWater
+    public class AretinoAppleJuice
     {
         /// <summary>
         /// Price for drink
@@ -21,15 +21,15 @@ namespace BleakwindBuffet.Data.Drink
             {
                 if (size == Size.Small)
                 {
-                    return 1.42;
+                    return 0.62;
                 }
                 else if (size == Size.Small)
                 {
-                    return 1.74;
+                    return 0.87;
                 }
                 else if (size == Size.Large)
                 {
-                    return 2.07;
+                    return 1.01;
                 }
                 else
                 {
@@ -47,15 +47,15 @@ namespace BleakwindBuffet.Data.Drink
             {
                 if (size == Size.Small)
                 {
-                    return 0;
+                    return 44;
                 }
                 else if (size == Size.Medium)
                 {
-                    return 0;
+                    return 88;
                 }
                 else if (size == Size.Large)
                 {
-                    return 0;
+                    return 132;
                 }
                 else
                 {
@@ -81,17 +81,12 @@ namespace BleakwindBuffet.Data.Drink
             }
         }
 
+
         /// <summary>
         /// Sees if theres Ice added
         /// </summary>
-        private bool ice = true;
-        public bool Ice { get; set; } = true;
-
-        /// <summary>
-        /// Sees if theres Lemon needed
-        /// </summary>
-        private bool lemon = false;
-        public bool Lemon { get; set; } = false;
+        private bool ice = false;
+        public bool Ice { get; set; } = false;
 
         /// <summary>
         /// This basically checks what conditions you want in your drink
@@ -101,8 +96,7 @@ namespace BleakwindBuffet.Data.Drink
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Hold ice");
-                if (!Lemon) instructions.Add("Add lemon");
+                if (!Ice) instructions.Add("Add ice");
 
                 return instructions;
             }
@@ -114,7 +108,7 @@ namespace BleakwindBuffet.Data.Drink
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + " Warrior's Water";
+            return size.ToString() + " Aretino Apple Juice";
         }
     }
 }

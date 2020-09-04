@@ -20,7 +20,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Gets the calorie amount in a burger
         /// </summary>
-        public uint Calorie => 982;
+        public uint Calories => 982;
 
         /// <summary>
         /// This basically checks what conditions you want on your food

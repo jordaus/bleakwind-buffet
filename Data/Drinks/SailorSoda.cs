@@ -5,12 +5,12 @@ using System.Text;
 
 /*
  * Author: Jordan Austin
- * Class name: MarkarthMilk.cs
- * Purpose: Class used to represent milk
+ * Class name: BriarheartBurger.cs
+ * Purpose: Class used to represent the soda
  */
-namespace BleakwindBuffet.Data.Drink
+namespace BleakwindBuffet.Data.Drinks
 {
-    public class MarkarthMilk
+    public class SailorSoda
     {
         /// <summary>
         /// Price for drink
@@ -19,17 +19,17 @@ namespace BleakwindBuffet.Data.Drink
         {
             get
             {
-                if (size == Size.Small)
+                if(size == Size.Small)
                 {
-                    return 1.05;
+                    return 1.42;
                 }
-                else if (size == Size.Small)
+                else if(size == Size.Small)
                 {
-                    return 1.11;
+                    return 1.74;
                 }
-                else if (size == Size.Large)
+                else if(size == Size.Large)
                 {
-                    return 1.22;
+                    return 2.07;
                 }
                 else
                 {
@@ -45,17 +45,17 @@ namespace BleakwindBuffet.Data.Drink
         {
             get
             {
-                if (size == Size.Small)
+                if(size == Size.Small)
                 {
-                    return 56;
+                    return 117;
                 }
-                else if (size == Size.Medium)
+                else if(size == Size.Medium)
                 {
-                    return 72;
+                    return 153;
                 }
-                else if (size == Size.Large)
+                else if(size == Size.Large)
                 {
-                    return 93;
+                    return 205;
                 }
                 else
                 {
@@ -82,10 +82,34 @@ namespace BleakwindBuffet.Data.Drink
         }
 
         /// <summary>
+        /// Checks for ice
+        /// </summary>
+        private bool ice = true;
+
+        /// <summary>
         /// Sees if theres Ice added
         /// </summary>
-        private bool ice = false;
-        public bool Ice { get; set; } = false;
+        public bool Ice { get; set; } = true;
+
+        /// <summary>
+        /// default soda flavor
+        /// </summary>
+        private SodaFlavor flavor = SodaFlavor.Cherry;
+
+        /// <summary>
+        /// get set method for the soda flavor
+        /// </summary>
+        public SodaFlavor Flavor
+        {
+            get
+            {
+                return flavor;
+            }
+            set
+            {
+                flavor = value;
+            }
+        }
 
         /// <summary>
         /// This basically checks what conditions you want in your drink
@@ -95,7 +119,7 @@ namespace BleakwindBuffet.Data.Drink
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Add ice");
+                if (!Ice) instructions.Add("Hold ice");
 
                 return instructions;
             }
@@ -107,7 +131,8 @@ namespace BleakwindBuffet.Data.Drink
         /// <returns></returns>
         public override string ToString()
         {
-            return size.ToString() + " Markarth Milk";
+            return size.ToString() + flavor.ToString() + " Sailor's Soda";
         }
+
     }
 }

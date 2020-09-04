@@ -5,12 +5,12 @@ using System.Text;
 
 /*
  * Author: Jordan Austin
- * Class name: CandlehearthCoffee.cs
- * Purpose: Class used to represent the coffee
+ * Class name: WarriorWater.cs
+ * Purpose: Class used to represent water
  */
-namespace BleakwindBuffet.Data.Drink
+namespace BleakwindBuffet.Data.Drinks
 {
-    public class CandlehearthCoffee
+    public class WarriorWater
     {
         /// <summary>
         /// Price for drink
@@ -21,15 +21,15 @@ namespace BleakwindBuffet.Data.Drink
             {
                 if (size == Size.Small)
                 {
-                    return 0.75;
+                    return 1.42;
                 }
                 else if (size == Size.Small)
                 {
-                    return 1.25;
+                    return 1.74;
                 }
                 else if (size == Size.Large)
                 {
-                    return 1.75;
+                    return 2.07;
                 }
                 else
                 {
@@ -47,15 +47,15 @@ namespace BleakwindBuffet.Data.Drink
             {
                 if (size == Size.Small)
                 {
-                    return 7;
+                    return 0;
                 }
                 else if (size == Size.Medium)
                 {
-                    return 10;
+                    return 0;
                 }
                 else if (size == Size.Large)
                 {
-                    return 20;
+                    return 0;
                 }
                 else
                 {
@@ -84,21 +84,14 @@ namespace BleakwindBuffet.Data.Drink
         /// <summary>
         /// Sees if theres Ice added
         /// </summary>
-        private bool ice = false;
-        public bool Ice { get; set; } = false;
+        private bool ice = true;
+        public bool Ice { get; set; } = true;
 
         /// <summary>
-        /// Sees if cream is needed
+        /// Sees if theres Lemon needed
         /// </summary>
-        private bool roomForCream = false;
-        public bool RoomForCream { get; set; } = false;
-
-
-        /// <summary>
-        /// Sees if Caffine is needed
-        /// </summary>
-        private bool decaf = false;
-        public bool Decaf { get; set; } = false;
+        private bool lemon = false;
+        public bool Lemon { get; set; } = false;
 
         /// <summary>
         /// This basically checks what conditions you want in your drink
@@ -108,8 +101,8 @@ namespace BleakwindBuffet.Data.Drink
             get
             {
                 List<string> instructions = new List<string>();
-                if (!Ice) instructions.Add("Add ice");
-                if (!RoomForCream) instructions.Add("Add cream");
+                if (!Ice) instructions.Add("Hold ice");
+                if (!Lemon) instructions.Add("Add lemon");
 
                 return instructions;
             }
@@ -121,14 +114,7 @@ namespace BleakwindBuffet.Data.Drink
         /// <returns></returns>
         public override string ToString()
         {
-            if (decaf == false)
-            {
-                return size.ToString() + " Candlehearth Coffee";
-            }
-            else
-            {
-                return size.ToString() + " Decaf Candlehearth Coffee";
-            }
+            return size.ToString() + " Warrior's Water";
         }
     }
 }
