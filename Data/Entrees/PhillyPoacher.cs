@@ -10,6 +10,9 @@ using System.Text;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// class represents a philly cheesesteak
+    /// </summary>
     public class PhillyPoacher
     {
         /// <summary>
@@ -40,6 +43,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// This basically checks what conditions you want on your food
         /// </summary>
+        /// <returns>instructions</returns>
         public List<string> SpecialInstructions
         {
             get
@@ -56,7 +60,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// returns the string name
         /// </summary>
-        /// <returns></returns>
+        /// <returns>string name of food</returns>
         public override string ToString()
         {
             return "Philly Poacher";

@@ -10,6 +10,9 @@ using BleakwindBuffet.Data.Enums;
 
 namespace BleakwindBuffet.Data.Entrees
 {
+    /// <summary>
+    /// class represents a burger
+    /// </summary>
     public class BriarheartBurger
     {
         /// <summary>
@@ -27,18 +30,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Checks to see if you want ketchup
         /// </summary>
-        public bool Ketchup
-        {
-            get
-            {
-                return ketchup;
-            }
-
-            set
-            {
-                ketchup = value;
-            }
-        }
+        public bool Ketchup { get; set; } = true;
 
         /// <summary>
         /// Checks to see if you want a bun
