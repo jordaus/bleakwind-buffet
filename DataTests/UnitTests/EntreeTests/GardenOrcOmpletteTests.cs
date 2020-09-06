@@ -123,7 +123,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
-
+            GardenOrcOmelette goo = new GardenOrcOmelette();
+            Assert.Equal(404.0, goo.Calories);
         }
 
         /// <summary>

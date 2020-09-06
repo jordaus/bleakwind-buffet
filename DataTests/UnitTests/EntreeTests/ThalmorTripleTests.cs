@@ -261,6 +261,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            ThalmorTriple tt = new ThalmorTriple();
+            Assert.Equal(943.0, tt.Calories);
         }
 
         /// <summary>

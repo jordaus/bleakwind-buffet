@@ -31,7 +31,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
-
+            ThugsTBone ttb = new ThugsTBone();
+            Assert.Equal(982.0, ttb.Calories);
         }
 
         /// <summary>

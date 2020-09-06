@@ -147,7 +147,7 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         public void ShouldReturnCorrectCalories()
         {
             BriarheartBurger bb = new BriarheartBurger();
-            //Assert.Equal(743, bb.Calories);
+            Assert.Equal(743.0, bb.Calories);
         }
 
         /// <summary>

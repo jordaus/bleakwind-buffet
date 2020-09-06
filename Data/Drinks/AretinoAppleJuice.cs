@@ -68,10 +68,7 @@ namespace BleakwindBuffet.Data.Drinks
                 {
                     return 132;
                 }
-                else
-                {
-                    throw new NotImplementedException();
-                }
+                throw new NotImplementedException();
             }
         }
 
@@ -97,7 +94,6 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Sees if theres Ice added
         /// </summary>
-        private bool ice = false;
         public bool Ice { get; set; } = false;
 
         /// <summary>

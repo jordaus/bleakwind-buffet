@@ -123,6 +123,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            SmokehouseSkeleton ss = new SmokehouseSkeleton();
+            Assert.Equal(602.0, ss.Calories);
         }
 
         /// <summary>

@@ -100,7 +100,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
-
+            PhillyPoacher pp = new PhillyPoacher();
+            Assert.Equal(784.0, pp.Calories);
         }
 
         /// <summary>

@@ -215,6 +215,8 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
         [Fact]
         public void ShouldReturnCorrectCalories()
         {
+            DoubleDraugr dd = new DoubleDraugr();
+            Assert.Equal(843.0, dd.Calories);
         }
 
         /// <summary>
