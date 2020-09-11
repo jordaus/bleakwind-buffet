@@ -16,6 +16,16 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
     public class DoubleDraugrTests
     {
         /// <summary>
+        /// Checks if object is an entree
+        /// </summary>
+        [Fact]
+        public void ShouldBeAnEntree()
+        {
+            DoubleDraugr dd = new DoubleDraugr();
+            Assert.IsAssignableFrom<Entree>(dd);
+        }
+
+        /// <summary>
         /// Tests to see if bun is a default option
         /// </summary>
         [Fact]

@@ -13,23 +13,23 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// class represents a TBone Steak
     /// </summary>
-    public class ThugsTBone
+    public class ThugsTBone : Entree
     {
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
-        public double Price => 6.44;
+        public override double Price => 6.44;
 
         /// <summary>
         /// Gets the calorie amount in a burger
         /// </summary>
-        public uint Calories => 982;
+        public override uint Calories => 982;
 
         /// <summary>
         /// This basically checks what conditions you want on your food
         /// </summary>
         /// <returns>instructions</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

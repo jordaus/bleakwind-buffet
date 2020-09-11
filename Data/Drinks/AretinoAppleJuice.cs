@@ -13,8 +13,14 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// class representing apple juice
     /// </summary>
-    public class AretinoAppleJuice
+    public class AretinoAppleJuice : Drink
     {
+        /// <summary>
+        /// Size of drink
+        /// </summary>
+        /// <returns>size of drink</returns>
+        private Size size = Size.Small;
+
         /// <summary>
         /// Price for drink
         /// </summary>
@@ -22,25 +28,16 @@ namespace BleakwindBuffet.Data.Drinks
         /// Thrown if price of size is unknown
         /// </exception>
         /// <returns>price of drink</returns>
-        public double Price
+        public override double Price
         {
             get
             {
-                if (size == Size.Small)
+                switch(Size)
                 {
-                    return 0.62;
-                }
-                else if (size == Size.Medium)
-                {
-                    return 0.87;
-                }
-                else if (size == Size.Large)
-                {
-                    return 1.01;
-                }
-                else
-                {
-                    throw new NotImplementedException();
+                    case Size.Small: return 0.62;
+                    case Size.Medium: return 0.87;
+                    case Size.Large: return 1.01;
+                    default: throw new NotImplementedException("Should never be reached!");
                 }
             }
         }
@@ -52,55 +49,36 @@ namespace BleakwindBuffet.Data.Drinks
         /// Thrown if Calories for size isn't known
         /// </exception>
         /// <returns>calories for drink</returns>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
-                if (size == Size.Small)
+                switch (Size)
                 {
-                    return 44;
+                    case Size.Small: return 44;
+                    case Size.Medium: return 88;
+                    case Size.Large: return 132;
+                    default: throw new NotImplementedException("Should never be reached!");
                 }
-                else if (size == Size.Medium)
-                {
-                    return 88;
-                }
-                else if (size == Size.Large)
-                {
-                    return 132;
-                }
-                throw new NotImplementedException();
             }
         }
-
-        /// <summary>
-        /// Size of drink
-        /// </summary>
-        /// <returns>size of drink</returns>
-        private Size size = Size.Small;
-
-        public Size Size
-        {
-            get
-            {
-                return size;
-            }
-            set
-            {
-                size = value;
-            }
-        }
-
 
         /// <summary>
         /// Sees if theres Ice added
         /// </summary>
         public bool Ice { get; set; } = false;
 
+        public override Size Size
+        {
+            get { return size; }
+            set { size = value;  }
+        }
+
         /// <summary>
         /// This basically checks what conditions you want in your drink
         /// </summary>
         /// <returns>The special instructions you really want</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Sides
     /// <summary>
     /// represents grits class
     /// </summary>
-    public class MadOtarGrits
+    public class MadOtarGrits : Side
     {
         /// <summary>
         /// Price for side
@@ -22,7 +22,7 @@ namespace BleakwindBuffet.Data.Sides
         /// Throws if size in invalid
         /// </exception>
         /// <returns>price via size</returns>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -52,7 +52,7 @@ namespace BleakwindBuffet.Data.Sides
         /// Throws if size in invalid
         /// </exception>
         /// <returns>calories via size</returns>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -84,7 +84,7 @@ namespace BleakwindBuffet.Data.Sides
         /// Size of side
         /// </summary>
         /// <returns>size</returns>
-        public Size Size
+        public override Size Size
         {
             get
             {
@@ -100,7 +100,7 @@ namespace BleakwindBuffet.Data.Sides
         /// This basically checks what conditions you want on your side
         /// </summary>
         /// <returns>instructions</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

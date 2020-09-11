@@ -10,7 +10,7 @@ using System.Text;
  */
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class MarkarthMilk
+    public class MarkarthMilk : Drink
     {
         /// <summary>
         /// Price for drink
@@ -19,7 +19,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// thrown if size is invalid
         /// </exception>
         /// <returns>price of drink</returns>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -49,7 +49,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// thrown if size is invalid
         /// </exception>
         /// <returns>calories of drink</returns>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -78,7 +78,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>size of drink</returns>
         private Size size = Size.Small;
 
-        public Size Size
+        public override Size Size
         {
             get
             {
@@ -100,7 +100,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// This basically checks what conditions you want in your drink
         /// </summary>
         /// <returns>Special Instructions</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

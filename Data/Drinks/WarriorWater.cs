@@ -13,7 +13,7 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// class represents water
     /// </summary>
-    public class WarriorWater
+    public class WarriorWater : Drink
     {
         /// <summary>
         /// Price for drink
@@ -22,7 +22,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Throws if size is invalid with calories
         /// </exception>
         /// <returns>the price drink</returns>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -52,7 +52,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// Throws if size is invalid with calories
         /// </exception>
         /// <returns>the amount of calories in drink</returns>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -81,7 +81,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// <returns>Size of Drink</returns>
         private Size size = Size.Small;
 
-        public Size Size
+        public override Size Size
         {
             get
             {
@@ -109,7 +109,7 @@ namespace BleakwindBuffet.Data.Drinks
         /// This basically checks what conditions you want in your drink
         /// </summary>
         /// <returns>Special Instructions on drink</returns>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

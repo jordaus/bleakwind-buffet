@@ -17,6 +17,16 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
     public class VokunSaladTests
     {
         /// <summary>
+        /// Checks to see if object is a side
+        /// </summary>
+        [Fact]
+        public void ShouldBeASide()
+        {
+            VokunSalad vs = new VokunSalad();
+            Assert.IsAssignableFrom<Side>(vs);
+        }
+
+        /// <summary>
         /// checks if small is default size
         /// </summary>
         [Fact]

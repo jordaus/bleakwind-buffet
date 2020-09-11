@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+
 /*
  * Author: Jordan Austin
  * Class name: BriarheartBurger.cs
@@ -13,17 +14,17 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// class represents a burger
     /// </summary>
-    public class BriarheartBurger
+    public class BriarheartBurger : Entree
     {
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
-        public double Price => 6.32;
+        public override double Price => 6.32;
 
         /// <summary>
         /// Gets the amount of calories in a burger
         /// </summary>
-        public uint Calories => 743;
+        public override uint Calories => 743;
 
         private bool ketchup;
 
@@ -61,7 +62,7 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// This basically checks what conditions you want on your burger
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
