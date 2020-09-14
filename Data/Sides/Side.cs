@@ -1,4 +1,9 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+ * Author: Jordan Austin
+ * Class: Sides.cs
+ * Purpose: Produces the sides class
+ */
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

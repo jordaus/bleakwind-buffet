@@ -1,4 +1,9 @@
-﻿using BleakwindBuffet.Data.Enums;
+﻿/*
+ * Author: Jordan Austin
+ * Class: Drinks.cs
+ * Purpose: Produces the drinks class
+ */
+using BleakwindBuffet.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

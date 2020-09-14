@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jordan Austin
+ * Class: Menu.cs
+ * Purpose: Produces the menu class
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data;
@@ -16,9 +21,9 @@ namespace BleakwindBuffet.Data.Menu
     public static class Menu
     {
         /// <summary>
-        /// returns entrees in an IEnumerable
+        /// returns all known entrees in an IEnumerable
         /// </summary>
-        /// <returns></returns>
+        /// <returns>all entrees</returns>
         public static IEnumerable<IOrderItem> Entrees()
         {
             List<IOrderItem> entreeList = new List<IOrderItem>();
@@ -55,9 +60,9 @@ namespace BleakwindBuffet.Data.Menu
         }
 
         /// <summary>
-        /// returns drinks in IEnumerable
+        /// returns all known drinks in IEnumerable
         /// </summary>
-        /// <returns></returns>
+        /// <returns>all drinks</returns>
         public static IEnumerable<IOrderItem> Drinks()
         {
             List<IOrderItem> drinkList = new List<IOrderItem>();
@@ -99,9 +104,9 @@ namespace BleakwindBuffet.Data.Menu
         }
 
         /// <summary>
-        /// returns sides in IEnumerable
+        /// returns all known sides in IEnumerable
         /// </summary>
-        /// <returns></returns>
+        /// <returns>all sides</returns>
         public static IEnumerable<IOrderItem> Sides()
         {
             List<IOrderItem> sideList = new List<IOrderItem>();
@@ -128,6 +133,10 @@ namespace BleakwindBuffet.Data.Menu
             return sideList;
         }
 
+        /// <summary>
+        /// returns the whole menu in IEnumerable
+        /// </summary>
+        /// <returns>the whole menu</returns>
         public static IEnumerable<IOrderItem> FullMenu()
         {
             List<IOrderItem> menuList = new List<IOrderItem>();

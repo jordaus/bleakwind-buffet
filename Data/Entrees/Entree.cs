@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Author: Jordan Austin
+ * Class: Entree.cs
+ * Purpose: Produes the entree class
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Interface;
