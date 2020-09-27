@@ -55,11 +55,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ArentinoAppleJuiceCustomize.xaml.cs">
+      <DependentUpon>ArentinoAppleJuiceCustomize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CandlehearthCoffeeCustomize.xaml.cs">
+      <DependentUpon>CandlehearthCoffeeCustomize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DragonbornWaffleFriesCustomize.xaml.cs">
+      <DependentUpon>DragonbornWaffleFriesCustomize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FriedMiraakCustomize.xaml.cs">
+      <DependentUpon>FriedMiraakCustomize.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GardenOrcOmeletteCustomization.xaml.cs">
       <DependentUpon>GardenOrcOmeletteCustomization.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MadOtarGritsCustomize.xaml.cs">
+      <DependentUpon>MadOtarGritsCustomize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MarkarthMilkCustomize.xaml.cs">
+      <DependentUpon>MarkarthMilkCustomize.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PhillyPoacherCustomize.xaml.cs">
       <DependentUpon>PhillyPoacherCustomize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SailorSodaCustomize.xaml.cs">
+      <DependentUpon>SailorSodaCustomize.xaml</DependentUpon>
     </Compile>
     <Compile Include="SmokehouseSkeletonCustomize.xaml.cs">
       <DependentUpon>SmokehouseSkeletonCustomize.xaml</DependentUpon>
@@ -70,7 +91,21 @@
     <Compile Include="ThugsTBoneCustomize.xaml.cs">
       <DependentUpon>ThugsTBoneCustomize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VokunSaladCustomize.xaml.cs">
+      <DependentUpon>VokunSaladCustomize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WarriorWaterCustomize.xaml.cs">
+      <DependentUpon>WarriorWaterCustomize.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ArentinoAppleJuiceCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BriarheartBurgerCustomization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CandlehearthCoffeeCustomize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,7 +113,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DragonbornWaffleFriesCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FriedMiraakCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GardenOrcOmeletteCustomization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MadOtarGritsCustomize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,7 +147,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MarkarthMilkCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PhillyPoacherCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SailorSodaCustomize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,6 +168,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ThugsTBoneCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VokunSaladCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WarriorWaterCustomize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
