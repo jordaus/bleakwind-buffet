@@ -41,5 +41,6 @@
                 <Label VerticalAlignment="Bottom">Total:</Label>
             </StackPanel>
         </Border>
+        <Button Margin="481,383,292,31" FontSize="23">Done</Button>
     </Grid>
 </UserControl>

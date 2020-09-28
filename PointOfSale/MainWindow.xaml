@@ -171,7 +171,9 @@
                 <Label>Subtotal:</Label>
                 <Label>Tax:</Label>
                 <Label VerticalAlignment="Bottom">Total:</Label>
-        </StackPanel>
+                <Button Content="Complete Order" Height="65" Margin="0,0,102,0"/>
+                <Button Content="Cancel Order" Height="65" Margin="0,0,102,0"/>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>

@@ -61,9 +61,11 @@
     <Compile Include="CandlehearthCoffeeCustomize.xaml.cs">
       <DependentUpon>CandlehearthCoffeeCustomize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChildScreen.cs" />
     <Compile Include="DragonbornWaffleFriesCustomize.xaml.cs">
       <DependentUpon>DragonbornWaffleFriesCustomize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ExtensionMethod.cs" />
     <Compile Include="FriedMiraakCustomize.xaml.cs">
       <DependentUpon>FriedMiraakCustomize.xaml</DependentUpon>
     </Compile>
@@ -76,6 +78,7 @@
     <Compile Include="MarkarthMilkCustomize.xaml.cs">
       <DependentUpon>MarkarthMilkCustomize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ParentScreen.cs" />
     <Compile Include="PhillyPoacherCustomize.xaml.cs">
       <DependentUpon>PhillyPoacherCustomize.xaml</DependentUpon>
     </Compile>
