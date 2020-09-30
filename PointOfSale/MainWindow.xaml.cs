@@ -24,5 +24,10 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+
+        public void SwapScreen(UIElement ui)
+        {
+            buttonColumn.Child = ui;
+        }
     }
 }

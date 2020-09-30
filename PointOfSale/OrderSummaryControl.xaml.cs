@@ -1,5 +1,4 @@
-﻿using PointOfSale.ExtensionMethod;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,18 +16,13 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDragurCustomization.xaml
+    /// Interaction logic for OrderSummaryControl.xaml
     /// </summary>
-    public partial class DoubleDragurCustomization : UserControl
+    public partial class OrderSummaryControl : UserControl
     {
-        public DoubleDragurCustomization()
+        public OrderSummaryControl()
         {
             InitializeComponent();
-        }
-
-        private void Done_Click(object sender, RoutedEventArgs e)
-        {
-            var orderControl = this.FindAncestor<MainWindow>();             orderControl.SwapScreen(new MenuControl());
         }
     }
 }

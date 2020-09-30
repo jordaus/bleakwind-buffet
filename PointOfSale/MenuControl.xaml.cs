@@ -17,18 +17,25 @@ using System.Windows.Shapes;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for DoubleDragurCustomization.xaml
+    /// Interaction logic for ScreenSwitch.xaml
     /// </summary>
-    public partial class DoubleDragurCustomization : UserControl
+    public partial class MenuControl : UserControl
     {
-        public DoubleDragurCustomization()
+        public MenuControl()
         {
             InitializeComponent();
         }
 
-        private void Done_Click(object sender, RoutedEventArgs e)
+        private void BB_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>();             orderControl.SwapScreen(new MenuControl());
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new BriarheartBurgerCustomization());
+        }
+
+        private void DD_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new DoubleDragurCustomization());  
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PointOfSale.ExtensionMethod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,16 +19,16 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for BriarheartBurger.xaml
     /// </summary>
-    public partial class BriarheartBurger : UserControl
+    public partial class BriarheartBurgerCustomization : UserControl
     {
-        public BriarheartBurger()
+        public BriarheartBurgerCustomization()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Done_Click(object sender, RoutedEventArgs e)
         {
-
+            var orderControl = this.FindAncestor<MainWindow>();             orderControl.SwapScreen(new MenuControl());
         }
     }
 }

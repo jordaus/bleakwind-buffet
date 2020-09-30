@@ -1,18 +1,18 @@
-﻿<UserControl x:Class="PointOfSale.BriarheartBurger"
+﻿<UserControl x:Class="PointOfSale.BriarheartBurgerCustomization"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Height="450" Width="930">
+             d:DesignHeight="400" d:DesignWidth="800" Height="400" Width="680">
     <!--Main frame design-->
     <Grid Background="Blue">
         <!--Main Text-->
-        <Label FontSize="30" Margin="275,10,272,383">Customize Brairheart Burger</Label>
+        <Label FontSize="20" Margin="150,10,140,354">Customize Brairheart Burger</Label>
         <Border BorderBrush="White" BorderThickness="5" Margin="10"/>
         <!--List Box-->
-        <StackPanel Margin="36,67,272,31">
+        <StackPanel Margin="36,67,272,194">
             <CheckBox FontSize="20">
                 Bun
             </CheckBox>
@@ -30,15 +30,6 @@
             </CheckBox>
         </StackPanel>
         <!--Pricing-->
-        <Border Height="354" Width="215" VerticalAlignment="Top" Margin="663,65,52,0" BorderBrush="White" BorderThickness="5">
-            <StackPanel Height="389" Width="215" VerticalAlignment="Top" Margin="0,0,85,0" Grid.Column="2" Grid.Row="1">
-                <Label VerticalAlignment="Top">Order:</Label>
-                <Label>Food</Label>
-                <Label>Subtotal:</Label>
-                <Label>Tax:</Label>
-                <Label VerticalAlignment="Bottom">Total:</Label>
-            </StackPanel>
-        </Border>
-        <Button Margin="481,383,292,31" FontSize="23" Click="Button_Click">Done</Button>
+        <Button FontSize="23" Click="Done_Click" Margin="148,206,374,150">Done</Button>
     </Grid>
 </UserControl>

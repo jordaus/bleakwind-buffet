@@ -78,12 +78,18 @@
     <Compile Include="MarkarthMilkCustomize.xaml.cs">
       <DependentUpon>MarkarthMilkCustomize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OrderSummaryControl.xaml.cs">
+      <DependentUpon>OrderSummaryControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ParentScreen.cs" />
     <Compile Include="PhillyPoacherCustomize.xaml.cs">
       <DependentUpon>PhillyPoacherCustomize.xaml</DependentUpon>
     </Compile>
     <Compile Include="SailorSodaCustomize.xaml.cs">
       <DependentUpon>SailorSodaCustomize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="SmokehouseSkeletonCustomize.xaml.cs">
       <DependentUpon>SmokehouseSkeletonCustomize.xaml</DependentUpon>
@@ -154,11 +160,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="OrderSummaryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PhillyPoacherCustomize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SailorSodaCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

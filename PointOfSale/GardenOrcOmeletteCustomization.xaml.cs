@@ -18,9 +18,9 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for GardenOrcOmelette.xaml
     /// </summary>
-    public partial class GardenOrcOmelette : UserControl
+    public partial class GardenOrcOmeletteCustomization : UserControl
     {
-        public GardenOrcOmelette()
+        public GardenOrcOmeletteCustomization()
         {
             InitializeComponent();
         }
