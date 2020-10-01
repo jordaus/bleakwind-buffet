@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PointOfSale.ExtensionMethod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,16 @@ namespace PointOfSale
     /// <summary>
     /// Interaction logic for ThalmorTriple.xaml
     /// </summary>
-    public partial class ThalmorTriple : UserControl
+    public partial class ThalmorTripleCustomization : UserControl
     {
-        public ThalmorTriple()
+        public ThalmorTripleCustomization()
         {
             InitializeComponent();
+        }
+
+        private void Done_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();             orderControl.SwapScreen(new MenuControl());
         }
     }
 }

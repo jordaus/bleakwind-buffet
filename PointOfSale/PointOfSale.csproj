@@ -94,8 +94,8 @@
     <Compile Include="SmokehouseSkeletonCustomize.xaml.cs">
       <DependentUpon>SmokehouseSkeletonCustomize.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ThalmorTriple.xaml.cs">
-      <DependentUpon>ThalmorTriple.xaml</DependentUpon>
+    <Compile Include="ThalmorTripleCustomization.xaml.cs">
+      <DependentUpon>ThalmorTripleCustomization.xaml</DependentUpon>
     </Compile>
     <Compile Include="ThugsTBoneCustomize.xaml.cs">
       <DependentUpon>ThugsTBoneCustomize.xaml</DependentUpon>
@@ -180,7 +180,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ThalmorTriple.xaml">
+    <Page Include="ThalmorTripleCustomization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PointOfSale.ExtensionMethod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace PointOfSale
         public MarkarthMilkCustomize()
         {
             InitializeComponent();
+        }
+
+        private void Done_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new MenuControl());
         }
     }
 }

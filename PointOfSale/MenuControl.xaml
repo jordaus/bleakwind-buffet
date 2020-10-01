@@ -42,7 +42,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Double Dragur
             </Button>
-            <Button>
+            <Button Click="TT_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -50,7 +50,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Thalmor Triple
             </Button>
-            <Button>
+            <Button Click="SS_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -58,7 +58,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Smokehouse Skeleton
             </Button>
-            <Button>
+            <Button Click="GOO_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -66,7 +66,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Garden Orc Omelette
             </Button>
-            <Button>
+            <Button Click="PP_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -74,7 +74,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Philly Poacher
             </Button>
-            <Button>
+            <Button Click="TTB_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -86,7 +86,7 @@
         <!--Drink List-->
         <StackPanel Height="389" Width="215" VerticalAlignment="Top" Margin="240,10,226,0" Grid.Column="1" Grid.Row="1">
             <Label Content="Drinks:"/>
-            <Button>
+            <Button Click="ss_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -94,7 +94,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Sailor's Soda
             </Button>
-            <Button>
+            <Button Click="mm_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -102,7 +102,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Markath Milk
             </Button>
-            <Button>
+            <Button Click="aj_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -110,7 +110,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Arentino Apple Juice
             </Button>
-            <Button>
+            <Button Click="cc_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -118,7 +118,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Candlehearth Coffee
             </Button>
-            <Button>
+            <Button Click="ww_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -130,7 +130,7 @@
         <!--Side List-->
         <StackPanel Height="389" Width="215" VerticalAlignment="Top" Margin="455,10,11,0" Grid.Column="1" Grid.Row="1">
             <Label Content="Sides:"/>
-            <Button>
+            <Button Click="vS_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -138,7 +138,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Vokun Salad
             </Button>
-            <Button>
+            <Button Click="fM_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -146,7 +146,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Fried Miraak
             </Button>
-            <Button>
+            <Button Click="moG_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>
@@ -154,7 +154,7 @@
                     <System:Double>215</System:Double>
                 </Button.Width> Mad Otar Grits
             </Button>
-            <Button>
+            <Button Click="dwF_Click">
                 <Button.Height>
                     <System:Double>40</System:Double>
                 </Button.Height>

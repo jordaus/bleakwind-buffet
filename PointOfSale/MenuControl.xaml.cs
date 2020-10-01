@@ -37,5 +37,89 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             orderControl.SwapScreen(new DoubleDragurCustomization());  
         }
+
+        private void TT_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new ThalmorTripleCustomization());
+        }
+
+        private void SS_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new SmokehouseSkeletonCustomize());
+        }
+
+        private void GOO_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new GardenOrcOmeletteCustomization());
+        }
+
+        private void PP_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new PhillyPoacherCustomize());
+        }
+
+        private void TTB_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new ThugsTBoneCustomize());
+        }
+
+        private void ss_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new SailorSodaCustomize());
+        }
+
+        private void mm_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new MarkarthMilkCustomize());
+        }
+
+        private void aj_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new ArentinoAppleJuiceCustomize());
+        }
+
+        private void cc_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new CandlehearthCoffeeCustomize());
+        }
+
+        private void ww_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new WarriorWaterCustomize());
+        }
+
+        private void vS_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new VokunSaladCustomize());
+        }
+
+        private void fM_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new FriedMiraakCustomize());
+        }
+
+        private void moG_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new MadOtarGritsCustomize());
+        }
+
+        private void dwF_Click(object sender, RoutedEventArgs e)
+        {
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new DragonbornWaffleFriesCustomize());
+        }
     }
 }

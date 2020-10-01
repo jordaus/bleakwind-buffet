@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PointOfSale.ExtensionMethod;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,9 +26,10 @@ namespace PointOfSale
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Done_Click(object sender, RoutedEventArgs e)
         {
-
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new MenuControl());
         }
 
     }

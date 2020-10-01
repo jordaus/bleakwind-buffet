@@ -28,7 +28,8 @@ namespace PointOfSale
 
         private void Done_Click(object sender, RoutedEventArgs e)
         {
-            var orderControl = this.FindAncestor<MainWindow>();             orderControl.SwapScreen(new MenuControl());
+            var orderControl = this.FindAncestor<MainWindow>();
+            orderControl.SwapScreen(new MenuControl());
         }
     }
 }
