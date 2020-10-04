@@ -14,16 +14,16 @@
         <Border BorderBrush="White" BorderThickness="5" Margin="10"/>
         <!--Area for check box-->
         <StackPanel Margin="36,67,272,31">
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Broccoli}" FontSize="20">
                 Broccoli
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Mushroom}" FontSize="20">
                 Mushroom
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Tomato}" FontSize="20">
                 Tomato
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Cheddar}" FontSize="20">
                 Cheddar
             </CheckBox>
         </StackPanel>

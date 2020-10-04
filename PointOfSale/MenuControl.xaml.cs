@@ -13,6 +13,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Entrees;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Sides;
+using BleakwindBuffet.Data.Enums;
 
 namespace PointOfSale
 {
@@ -29,97 +33,129 @@ namespace PointOfSale
         private void BB_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new BriarheartBurgerCustomization());
+            var screen = new BriarheartBurgerCustomization();
+            screen.DataContext = new BriarheartBurger();
+            orderControl.SwapScreen(screen);
         }
 
         private void DD_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new DoubleDragurCustomization());  
+            var screen = new DoubleDragurCustomization();
+            screen.DataContext = new DoubleDraugr();
+            orderControl.SwapScreen(screen);  
         }
 
         private void TT_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new ThalmorTripleCustomization());
+            var screen = new ThalmorTripleCustomization();
+            screen.DataContext = new ThalmorTriple();
+            orderControl.SwapScreen(screen);
         }
 
         private void SS_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new SmokehouseSkeletonCustomize());
+            var screen = new SmokehouseSkeletonCustomize();
+            screen.DataContext = new SmokehouseSkeleton();
+            orderControl.SwapScreen(screen);
         }
 
         private void GOO_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new GardenOrcOmeletteCustomization());
+            var screen = new GardenOrcOmeletteCustomization();
+            screen.DataContext = new GardenOrcOmelette();
+            orderControl.SwapScreen(screen);
         }
 
         private void PP_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new PhillyPoacherCustomize());
+            var screen = new PhillyPoacherCustomize();
+            screen.DataContext = new PhillyPoacher();
+            orderControl.SwapScreen(screen);
         }
 
         private void TTB_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new ThugsTBoneCustomize());
+            var screen = new ThugsTBoneCustomize();
+            screen.DataContext = new ThugsTBone();
+            orderControl.SwapScreen(screen);
         }
 
         private void ss_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new SailorSodaCustomize());
+            var screen = new SailorSodaCustomize();
+            screen.DataContext = new SailorSoda();
+            orderControl.SwapScreen(screen);
         }
 
         private void mm_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new MarkarthMilkCustomize());
+            var screen = new MarkarthMilkCustomize();
+            screen.DataContext = new MarkarthMilk();
+            orderControl.SwapScreen(screen);
         }
 
         private void aj_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new ArentinoAppleJuiceCustomize());
+            var screen = new ArentinoAppleJuiceCustomize();
+            screen.DataContext = new AretinoAppleJuice();
+            orderControl.SwapScreen(screen);
         }
 
         private void cc_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new CandlehearthCoffeeCustomize());
+            var screen = new CandlehearthCoffeeCustomize();
+            screen.DataContext = new CandlehearthCoffee();
+            orderControl.SwapScreen(screen);
         }
 
         private void ww_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new WarriorWaterCustomize());
+            var screen = new WarriorWaterCustomize();
+            screen.DataContext = new WarriorWater();
+            orderControl.SwapScreen(screen);
         }
 
         private void vS_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new VokunSaladCustomize());
+            var screen = new VokunSaladCustomize();
+            screen.DataContext = new VokunSalad();
+            orderControl.SwapScreen(screen);
         }
 
         private void fM_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new FriedMiraakCustomize());
+            var screen = new FriedMiraakCustomize();
+            screen.DataContext = new FriedMiraak();
+            orderControl.SwapScreen(screen);
         }
 
         private void moG_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new MadOtarGritsCustomize());
+            var screen = new MadOtarGritsCustomize();
+            screen.DataContext = new MadOtarGrits();
+            orderControl.SwapScreen(screen);
         }
 
         private void dwF_Click(object sender, RoutedEventArgs e)
         {
             var orderControl = this.FindAncestor<MainWindow>();
-            orderControl.SwapScreen(new DragonbornWaffleFriesCustomize());
+            var screen = new DragonbornWaffleFriesCustomize();
+            screen.DataContext = new DragonbornWaffleFries();
+            orderControl.SwapScreen(screen);
         }
     }
 }

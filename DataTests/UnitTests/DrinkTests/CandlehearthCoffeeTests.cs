@@ -191,5 +191,62 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             cc.Size = size;
             Assert.Equal(name, cc.ToString());
         }
+
+        /// <summary>
+        /// Checks if ice property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingIceNotifiesIceProperty()
+        {
+            var cc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(cc, "Ice", () =>
+            {
+                cc.Ice = true;
+            });
+
+            Assert.PropertyChanged(cc, "Ice", () =>
+            {
+                cc.Ice = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if cream property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingCreamNotifiesCreamProperty()
+        {
+            var cc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(cc, "Cream", () =>
+            {
+                cc.RoomForCream = true;
+            });
+
+            Assert.PropertyChanged(cc, "Cream", () =>
+            {
+                cc.RoomForCream = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if decaf property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingDecafNotifiesDecafProperty()
+        {
+            var cc = new CandlehearthCoffee();
+
+            Assert.PropertyChanged(cc, "Decaf", () =>
+            {
+                cc.Decaf = true;
+            });
+
+            Assert.PropertyChanged(cc, "Decaf", () =>
+            {
+                cc.Decaf = false;
+            });
+        }
     }
 }

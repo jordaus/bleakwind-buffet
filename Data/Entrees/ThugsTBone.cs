@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 /*
  * Author: Jordan Austin
  * Class name: ThugsTBone.cs
@@ -13,8 +14,10 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// class represents a TBone Steak
     /// </summary>
-    public class ThugsTBone : Entree
+    public class ThugsTBone : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Gets the price of the burger
         /// </summary>

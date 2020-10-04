@@ -171,5 +171,81 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             SmokehouseSkeleton ss = new SmokehouseSkeleton();
             Assert.Equal("Smokehouse Skeleton", ss.ToString());
         }
+
+        /// <summary>
+        /// Checks if egg property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingEggNotifiesEggProperty()
+        {
+            var bb = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(bb, "Egg", () =>
+            {
+                bb.Egg = true;
+            });
+
+            Assert.PropertyChanged(bb, "Egg", () =>
+            {
+                bb.Egg = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if sausage property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingSausageNotifiesSausageProperty()
+        {
+            var bb = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(bb, "Sausage", () =>
+            {
+                bb.SausageLink = true;
+            });
+
+            Assert.PropertyChanged(bb, "Sausage", () =>
+            {
+                bb.SausageLink = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if pancake property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingPancakeNotifiesPancakeProperty()
+        {
+            var bb = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(bb, "Pancake", () =>
+            {
+                bb.Pancake = true;
+            });
+
+            Assert.PropertyChanged(bb, "Pancake", () =>
+            {
+                bb.Pancake = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if hashbrowns property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingHBNotifiesHBProperty()
+        {
+            var bb = new SmokehouseSkeleton();
+
+            Assert.PropertyChanged(bb, "HashBrowns", () =>
+            {
+                bb.HashBrowns = true;
+            });
+
+            Assert.PropertyChanged(bb, "HashBrowns", () =>
+            {
+                bb.HashBrowns = false;
+            });
+        }
     }
 }

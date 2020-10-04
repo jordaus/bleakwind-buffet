@@ -276,5 +276,157 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             DoubleDraugr dd = new DoubleDraugr();
             Assert.Equal("Double Draugr", dd.ToString());
         }
+
+        /// <summary>
+        /// Checks if ketchup property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingKetchupNotifiesKetchupProperty()
+        {
+            var dd = new DoubleDraugr();
+
+            Assert.PropertyChanged(dd, "Ketchup", () =>
+            {
+                dd.Ketchup = true;
+            });
+
+            Assert.PropertyChanged(dd, "Ketchup", () =>
+            {
+                dd.Ketchup = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if bun property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingBunNotifiesBunProperty()
+        {
+            var bb = new DoubleDraugr();
+
+            Assert.PropertyChanged(bb, "Bun", () =>
+            {
+                bb.Bun = true;
+            });
+
+            Assert.PropertyChanged(bb, "Bun", () =>
+            {
+                bb.Bun = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if Mustard property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingMustardNotifiesMustardProperty()
+        {
+            var bb = new DoubleDraugr();
+
+            Assert.PropertyChanged(bb, "Mustard", () =>
+            {
+                bb.Mustard = true;
+            });
+
+            Assert.PropertyChanged(bb, "Mustard", () =>
+            {
+                bb.Mustard = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if Pickles property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingPicklesNotifiesPicklesProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Pickles", () =>
+            {
+                bb.Pickles = true;
+            });
+
+            Assert.PropertyChanged(bb, "Pickles", () =>
+            {
+                bb.Pickles = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if cheese property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingCheeseNotifiesCheeseProperty()
+        {
+            var bb = new DoubleDraugr();
+
+            Assert.PropertyChanged(bb, "Cheese", () =>
+            {
+                bb.Cheese = true;
+            });
+
+            Assert.PropertyChanged(bb, "Cheese", () =>
+            {
+                bb.Cheese = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if tomato property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperty()
+        {
+            var bb = new DoubleDraugr();
+
+            Assert.PropertyChanged(bb, "Tomato", () =>
+            {
+                bb.Tomato = true;
+            });
+
+            Assert.PropertyChanged(bb, "Tomato", () =>
+            {
+                bb.Tomato = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if lettuce property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingLettuceNotifiesLettuceProperty()
+        {
+            var bb = new DoubleDraugr();
+
+            Assert.PropertyChanged(bb, "Lettuce", () =>
+            {
+                bb.Lettuce = true;
+            });
+
+            Assert.PropertyChanged(bb, "Lettuce", () =>
+            {
+                bb.Lettuce = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if mayo property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingMayoNotifiesMayoProperty()
+        {
+            var bb = new DoubleDraugr();
+
+            Assert.PropertyChanged(bb, "Mayo", () =>
+            {
+                bb.Mayo = true;
+            });
+
+            Assert.PropertyChanged(bb, "Mayo", () =>
+            {
+                bb.Mayo = false;
+            });
+        }
     }
 }

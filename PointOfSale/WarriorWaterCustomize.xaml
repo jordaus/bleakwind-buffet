@@ -13,14 +13,14 @@
         <Border BorderBrush="White" BorderThickness="5" Margin="10"/>
         <!--Area for check box-->
         <StackPanel Margin="36,67,460,31">
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Ice}" FontSize="20">
                 Ice
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Lemon}" FontSize="20">
                 Lemon
             </CheckBox>
             <!--Size Box-->
-            <ComboBox>
+            <ComboBox SelectedItem="{Binding Path=Size}">
                 <ComboBoxItem>Small</ComboBoxItem>
                 <ComboBoxItem>Medium</ComboBoxItem>
                 <ComboBoxItem>Large</ComboBoxItem>

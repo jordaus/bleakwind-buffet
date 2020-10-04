@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 
 /*
  * Author: Jordan Austin
@@ -10,8 +12,10 @@ using System.Text;
  */
 namespace BleakwindBuffet.Data.Drinks
 {
-    public class MarkarthMilk : Drink
+    public class MarkarthMilk : Drink, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price for drink
         /// </summary>
@@ -80,13 +84,13 @@ namespace BleakwindBuffet.Data.Drinks
 
         public override Size Size
         {
-            get
-            {
-                return size;
-            }
+            get { return size; }
             set
             {
                 size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             }
         }
 
@@ -94,7 +98,19 @@ namespace BleakwindBuffet.Data.Drinks
         /// Sees if theres Ice added
         /// </summary>
         private bool ice = false;
-        public bool Ice { get; set; } = false;
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// This basically checks what conditions you want in your drink

@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
-
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 /*
  * Author: Jordan Austin
  * Class name: BriarheartBurger.cs
@@ -14,8 +15,10 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// class represents a burger
     /// </summary>
-    public class BriarheartBurger : Entree
+    public class BriarheartBurger : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -26,17 +29,42 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public override uint Calories => 743;
 
-        private bool ketchup;
+        private bool ketchup = true;
 
         /// <summary>
         /// Checks to see if you want ketchup
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup
+        {
+            get
+            {
+                return ketchup;
+            }
+            set
+            {
+                ketchup = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ketchup"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Checks to see if you want a bun
         /// </summary>
-        public bool Bun { get; set; } = true;
+        private bool bun = true;
+        public bool Bun
+        {
+            get
+            {
+                return bun;
+            }
+            set
+            {
+                bun = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Bun"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         private bool mustard = true;
 
@@ -45,19 +73,53 @@ namespace BleakwindBuffet.Data.Entrees
         /// </summary>
         public bool Mustard
         {
-            get => mustard;
-            set => mustard = value;
+            get
+            {
+                return mustard;
+            }
+            set
+            {
+                mustard = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mustard"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
         }
 
         /// <summary>
         /// Checks to see if you want pickles
         /// </summary>
-        public bool Pickles { get; set; } = true;
+        private bool pickles = true;
+        public bool Pickles
+        {
+            get
+            {
+                return pickles;
+            }
+            set
+            {
+                pickles = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pickles"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Checks to see if you want cheese
         /// </summary>
-        public bool Cheese { get; set; } = true;
+        private bool cheese = true;
+        public bool Cheese
+        {
+            get
+            {
+                return cheese;
+            }
+            set
+            {
+                cheese = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheese"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// This basically checks what conditions you want on your burger

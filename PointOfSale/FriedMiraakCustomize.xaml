@@ -14,7 +14,7 @@
         <!--Area for check box-->
         <StackPanel Margin="36,67,450,31">
             <!--Size Box-->
-            <ComboBox>
+            <ComboBox SelectedItem="{Binding Path=Size}">
                 <ComboBoxItem>Small</ComboBoxItem>
                 <ComboBoxItem>Medium</ComboBoxItem>
                 <ComboBoxItem>Large</ComboBoxItem>

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 /*
  * Author: Jordan Austin
  * Class name: PhillyPoacher.cs
@@ -13,8 +14,10 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// class represents a philly cheesesteak
     /// </summary>
-    public class PhillyPoacher : Entree
+    public class PhillyPoacher : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -28,17 +31,56 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Decides if you want Sirloin
         /// </summary>
-        public bool Sirloin { get; set; } = true;
+        private bool sirloin = true;
+        public bool Sirloin
+        {
+            get
+            {
+                return sirloin;
+            }
+            set
+            {
+                sirloin = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Decides if you want Onion
         /// </summary>
-        public bool Onion { get; set; } = true;
+        private bool onion = true;
+        public bool Onion
+        {
+            get
+            {
+                return onion;
+            }
+            set
+            {
+                onion = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Decides if you want Roll
         /// </summary>
-        public bool Roll { get; set; } = true;
+        private bool roll = true;
+        public bool Roll
+        {
+            get
+            {
+                return roll;
+            }
+            set
+            {
+                roll = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// This basically checks what conditions you want on your food

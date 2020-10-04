@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 
 /*
  * Author: Jordan Austin
@@ -13,8 +15,10 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// class represents coffee
     /// </summary>
-    public class CandlehearthCoffee : Drink
+    public class CandlehearthCoffee : Drink, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price for drink
         /// </summary>
@@ -83,13 +87,13 @@ namespace BleakwindBuffet.Data.Drinks
 
         public override Size Size
         {
-            get
-            {
-                return size;
-            }
+            get { return size; }
             set
             {
                 size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             }
         }
 
@@ -97,19 +101,52 @@ namespace BleakwindBuffet.Data.Drinks
         /// Sees if theres Ice added
         /// </summary>
         private bool ice = false;
-        public bool Ice { get; set; } = false;
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Sees if cream is needed
         /// </summary>
         private bool roomForCream = false;
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream
+        {
+            get
+            {
+                return roomForCream;
+            }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cream"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
 
         /// <summary>
         /// Sees if Caffine is needed
         /// </summary>
-        public bool Decaf { get; set; } = false;
+        private bool decaf = false;
+        public bool Decaf
+        {
+            get { return decaf; }
+            set
+            {
+                decaf = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Decaf"));
+            }
+        }
 
         /// <summary>
         /// This basically checks what conditions you want in your drink

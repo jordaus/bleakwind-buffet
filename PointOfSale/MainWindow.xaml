@@ -13,11 +13,13 @@
         <!--Measurments for Rows and Columns-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="680"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
         <Border Name="buttonColumn" Grid.Column="0">
             <local:MenuControl></local:MenuControl>
         </Border>
-        <Border Name ="orderColumn" Grid.Column="1"></Border>
+        <Border Name ="orderColumn" Grid.Column="1">
+            <local:OrderSummaryControl></local:OrderSummaryControl>
+        </Border>
     </Grid>
 </Window>

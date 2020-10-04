@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 /*
  * Author: Jordan Austin
  * Class name: SmokehouseSkeleton.cs
@@ -13,8 +14,10 @@ namespace BleakwindBuffet.Data.Entrees
     /// <summary>
     /// class represents food Smokehouse Skeleton
     /// </summary>
-    public class SmokehouseSkeleton : Entree
+    public class SmokehouseSkeleton : Entree, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -28,22 +31,74 @@ namespace BleakwindBuffet.Data.Entrees
         /// <summary>
         /// Decides if you want sausage links
         /// </summary>
-        public bool SausageLink { get; set; } = true;
+        private bool sausagelink = true;
+        public bool SausageLink
+        {
+            get
+            {
+                return sausagelink;
+            }
+            set
+            {
+                sausagelink = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sausage"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Decides if you want hash browns
         /// </summary>
-        public bool HashBrowns { get; set; } = true;
+        private bool hashbrowns = true;
+        public bool HashBrowns
+        {
+            get
+            {
+                return hashbrowns;
+            }
+            set
+            {
+                hashbrowns = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("HashBrowns"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Decides if you want egg
         /// </summary>
-        public bool Egg { get; set; } = true;
+        private bool egg = true;
+        public bool Egg
+        {
+            get
+            {
+                return egg;
+            }
+            set
+            {
+                egg = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Egg"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// Decides if you want pancakes
         /// </summary>
-        public bool Pancake { get; set; } = true;
+        private bool pancake = true;
+        public bool Pancake
+        {
+            get
+            {
+                return pancake;
+            }
+            set
+            {
+                pancake = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Pancake"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// This basically checks what conditions you want on your food

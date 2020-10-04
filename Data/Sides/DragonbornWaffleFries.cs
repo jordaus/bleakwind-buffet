@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 
 /*
  * Author: Jordan Austin
@@ -10,8 +12,10 @@ using BleakwindBuffet.Data.Enums;
  */
 namespace BleakwindBuffet.Data.Sides
 {
-    public class DragonbornWaffleFries : Side
+    public class DragonbornWaffleFries : Side, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price for side
         /// </summary>
@@ -71,13 +75,13 @@ namespace BleakwindBuffet.Data.Sides
 
         public override Size Size
         {
-            get
-            {
-                return size;
-            }
+            get { return size; }
             set
             {
                 size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             }
         }
 

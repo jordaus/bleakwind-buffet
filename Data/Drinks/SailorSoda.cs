@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 
 /*
  * Author: Jordan Austin
@@ -13,8 +15,10 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// class represents soda
     /// </summary>
-    public class SailorSoda : Drink
+    public class SailorSoda : Drink, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Price for drink
         /// </summary>
@@ -83,24 +87,37 @@ namespace BleakwindBuffet.Data.Drinks
 
         public override Size Size
         {
-            get
-            {
-                return size;
-            }
+            get { return size; }
             set
             {
                 size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
             }
         }
 
         /// <summary>
         /// Checks for ice
         /// </summary>
+        private bool ice = true;
 
         /// <summary>
         /// Sees if theres Ice added
         /// </summary>
-        public bool Ice { get; set; } = true;
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         /// <summary>
         /// default soda flavor
@@ -120,6 +137,7 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 flavor = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Flavor"));
             }
         }
 

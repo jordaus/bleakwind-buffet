@@ -13,19 +13,19 @@
         <Border BorderBrush="White" BorderThickness="5" Margin="10"/>
         <!--List Box-->
         <StackPanel Margin="36,67,272,194">
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Bun}" FontSize="20">
                 Bun
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Ketchup}" FontSize="20">
                 Ketchup
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Mustard}" FontSize="20">
                 Mustard
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Pickles}" FontSize="20">
                 Pickles
             </CheckBox>
-            <CheckBox FontSize="20">
+            <CheckBox IsChecked="{Binding Path=Cheese}" FontSize="20">
                 Cheese
             </CheckBox>
         </StackPanel>

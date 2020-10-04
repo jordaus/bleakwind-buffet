@@ -326,5 +326,195 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             ThalmorTriple tt = new ThalmorTriple();
             Assert.Equal("Thalmor Triple", tt.ToString());
         }
+
+        /// <summary>
+        /// Checks if ketchup property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingKetchupNotifiesKetchupProperty()
+        {
+            var dd = new ThalmorTriple();
+
+            Assert.PropertyChanged(dd, "Ketchup", () =>
+            {
+                dd.Ketchup = true;
+            });
+
+            Assert.PropertyChanged(dd, "Ketchup", () =>
+            {
+                dd.Ketchup = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if bun property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingBunNotifiesBunProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Bun", () =>
+            {
+                bb.Bun = true;
+            });
+
+            Assert.PropertyChanged(bb, "Bun", () =>
+            {
+                bb.Bun = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if Mustard property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingMustardNotifiesMustardProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Mustard", () =>
+            {
+                bb.Mustard = true;
+            });
+
+            Assert.PropertyChanged(bb, "Mustard", () =>
+            {
+                bb.Mustard = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if Pickles property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingPicklesNotifiesPicklesProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Pickles", () =>
+            {
+                bb.Pickles = true;
+            });
+
+            Assert.PropertyChanged(bb, "Pickles", () =>
+            {
+                bb.Pickles = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if cheese property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingCheeseNotifiesCheeseProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Cheese", () =>
+            {
+                bb.Cheese = true;
+            });
+
+            Assert.PropertyChanged(bb, "Cheese", () =>
+            {
+                bb.Cheese = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if tomato property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Tomato", () =>
+            {
+                bb.Tomato = true;
+            });
+
+            Assert.PropertyChanged(bb, "Tomato", () =>
+            {
+                bb.Tomato = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if lettuce property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingLettuceNotifiesLettuceProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Lettuce", () =>
+            {
+                bb.Lettuce = true;
+            });
+
+            Assert.PropertyChanged(bb, "Lettuce", () =>
+            {
+                bb.Lettuce = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if mayo property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingMayoNotifiesMayoProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Mayo", () =>
+            {
+                bb.Mayo = true;
+            });
+
+            Assert.PropertyChanged(bb, "Mayo", () =>
+            {
+                bb.Mayo = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if bacon property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingBaconNotifiesBaconProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Bacon", () =>
+            {
+                bb.Bacon = true;
+            });
+
+            Assert.PropertyChanged(bb, "Bacon", () =>
+            {
+                bb.Bacon = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if egg property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingEggNotifiesEggProperty()
+        {
+            var bb = new ThalmorTriple();
+
+            Assert.PropertyChanged(bb, "Egg", () =>
+            {
+                bb.Egg = true;
+            });
+
+            Assert.PropertyChanged(bb, "Egg", () =>
+            {
+                bb.Egg = false;
+            });
+        }
     }
 }

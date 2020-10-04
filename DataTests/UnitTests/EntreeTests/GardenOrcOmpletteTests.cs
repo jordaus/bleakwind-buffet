@@ -171,5 +171,81 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
             GardenOrcOmelette goo = new GardenOrcOmelette();
             Assert.Equal("Garden Orc Omelette", goo.ToString());
         }
+
+        /// <summary>
+        /// Checks if tomato property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingTomatoNotifiesTomatoProperty()
+        {
+            var bb = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(bb, "Tomato", () =>
+            {
+                bb.Tomato = true;
+            });
+
+            Assert.PropertyChanged(bb, "Tomato", () =>
+            {
+                bb.Tomato = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if mushrooms property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingMushroomsNotifiesMushroomsProperty()
+        {
+            var bb = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(bb, "Mushrooms", () =>
+            {
+                bb.Mushrooms = true;
+            });
+
+            Assert.PropertyChanged(bb, "Mushrooms", () =>
+            {
+                bb.Mushrooms = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if broccoli property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingBroccoliNotifiesBroccoliProperty()
+        {
+            var bb = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(bb, "Broccoli", () =>
+            {
+                bb.Broccoli = true;
+            });
+
+            Assert.PropertyChanged(bb, "Broccoli", () =>
+            {
+                bb.Broccoli = false;
+            });
+        }
+
+        /// <summary>
+        /// Checks if cheddar property is notified
+        /// </summary>
+        [Fact]
+        public void ChangingCheddarNotifiesCheedarProperty()
+        {
+            var bb = new GardenOrcOmelette();
+
+            Assert.PropertyChanged(bb, "Cheddar", () =>
+            {
+                bb.Cheddar = true;
+            });
+
+            Assert.PropertyChanged(bb, "Cheddar", () =>
+            {
+                bb.Cheddar = false;
+            });
+        }
     }
 }

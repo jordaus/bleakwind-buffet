@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data.Drinks;
+using BleakwindBuffet.Data.Enums;
 
 namespace PointOfSale
 {
@@ -31,6 +33,5 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             orderControl.SwapScreen(new MenuControl());
         }
-
     }
 }

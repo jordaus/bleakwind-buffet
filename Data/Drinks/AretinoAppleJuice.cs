@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 
 /*
  * Author: Jordan Austin
@@ -13,8 +15,10 @@ namespace BleakwindBuffet.Data.Drinks
     /// <summary>
     /// class representing apple juice
     /// </summary>
-    public class AretinoAppleJuice : Drink
+    public class AretinoAppleJuice : Drink, IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary>
         /// Size of drink
         /// </summary>
@@ -66,12 +70,32 @@ namespace BleakwindBuffet.Data.Drinks
         /// <summary>
         /// Sees if theres Ice added
         /// </summary>
-        public bool Ice { get; set; } = false;
+
+        private bool ice = false;
+        public bool Ice
+        {
+            get
+            {
+                return ice;
+            }
+            set
+            {
+                ice = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+            }
+        }
 
         public override Size Size
         {
             get { return size; }
-            set { size = value;  }
+            set
+            {
+                size = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+            }
         }
 
         /// <summary>
