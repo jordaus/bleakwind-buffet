@@ -211,6 +211,63 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
             });
         }
 
-        
+        [Theory]
+        [InlineData(SodaFlavor.Cherry)]
+        [InlineData(SodaFlavor.Blackberry)]
+        [InlineData(SodaFlavor.Grapefruit)]
+        [InlineData(SodaFlavor.Lemon)]
+        [InlineData(SodaFlavor.Peach)]
+        [InlineData(SodaFlavor.Watermelon)]
+        public void ChangingFlavorNotifiesFlavorProperty(SodaFlavor flavor)
+        {
+            var ss = new SailorSoda();
+
+            Assert.PropertyChanged(ss, "Flavor", () =>
+            {
+                ss.Flavor = flavor;
+            });
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            SailorSoda aj = new SailorSoda();
+            Assert.PropertyChanged(aj, "Size", () => aj.Size = size);
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesCaloriesProperty(Size size)
+        {
+            SailorSoda aj = new SailorSoda();
+            Assert.PropertyChanged(aj, "Calories", () => aj.Size = size);
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesPriceProperty(Size size)
+        {
+            SailorSoda aj = new SailorSoda();
+            Assert.PropertyChanged(aj, "Price", () => aj.Size = size);
+        }
+
+        /// <summary>
+        /// Implements the INotify Property Change
+        /// </summary>
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            SailorSoda bb = new SailorSoda();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(bb);
+        }
+
+
     }
 }

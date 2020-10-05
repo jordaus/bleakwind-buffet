@@ -87,5 +87,45 @@ namespace BleakwindBuffet.DataTests.UnitTests.SideTests
             mog.Size = size;
             Assert.Equal(name, mog.ToString());
         }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            var aj = new MadOtarGrits();
+            Assert.PropertyChanged(aj, "Size", () => aj.Size = size);
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesCaloriesProperty(Size size)
+        {
+            var aj = new MadOtarGrits();
+            Assert.PropertyChanged(aj, "Calories", () => aj.Size = size);
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesPriceProperty(Size size)
+        {
+            var aj = new MadOtarGrits();
+            Assert.PropertyChanged(aj, "Price", () => aj.Size = size);
+        }
+
+        /// <summary>
+        /// Implements the INotify Property Change
+        /// </summary>
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            var bb = new MadOtarGrits();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(bb);
+        }
     }
 }

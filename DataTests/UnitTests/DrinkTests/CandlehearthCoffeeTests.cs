@@ -248,5 +248,45 @@ namespace BleakwindBuffet.DataTests.UnitTests.DrinkTests
                 cc.Decaf = false;
             });
         }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesSizeProperty(Size size)
+        {
+            CandlehearthCoffee aj = new CandlehearthCoffee();
+            Assert.PropertyChanged(aj, "Size", () => aj.Size = size);
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesCaloriesProperty(Size size)
+        {
+            CandlehearthCoffee aj = new CandlehearthCoffee();
+            Assert.PropertyChanged(aj, "Calories", () => aj.Size = size);
+        }
+
+        [Theory]
+        [InlineData(Size.Small)]
+        [InlineData(Size.Medium)]
+        [InlineData(Size.Large)]
+        public void ChangingSizeNotifiesPriceProperty(Size size)
+        {
+            CandlehearthCoffee aj = new CandlehearthCoffee();
+            Assert.PropertyChanged(aj, "Price", () => aj.Size = size);
+        }
+
+        /// <summary>
+        /// Implements the INotify Property Change
+        /// </summary>
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            CandlehearthCoffee bb = new CandlehearthCoffee();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(bb);
+        }
     }
 }

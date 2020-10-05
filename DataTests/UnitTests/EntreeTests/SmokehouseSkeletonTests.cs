@@ -247,5 +247,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 bb.HashBrowns = false;
             });
         }
+
+        /// <summary>
+        /// Implements the INotify Property Change
+        /// </summary>
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            SmokehouseSkeleton bb = new SmokehouseSkeleton();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(bb);
+        }
     }
 }

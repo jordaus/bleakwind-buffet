@@ -428,5 +428,15 @@ namespace BleakwindBuffet.DataTests.UnitTests.EntreeTests
                 bb.Mayo = false;
             });
         }
+
+        /// <summary>
+        /// Implements the INotify Property Change
+        /// </summary>
+        [Fact]
+        public void ImplementsINotifyPropertyChange()
+        {
+            DoubleDraugr bb = new DoubleDraugr();
+            Assert.IsAssignableFrom<System.ComponentModel.INotifyPropertyChanged>(bb);
+        }
     }
 }
