@@ -6,10 +6,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Interface
 {
-    public interface IOrderItem
+    public interface IOrderItem : INotifyPropertyChanged
     {
         double Price { get; }
 
