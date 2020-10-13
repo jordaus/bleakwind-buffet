@@ -23,6 +23,8 @@ namespace PointOfSale
     /// </summary>
     public partial class ArentinoAppleJuiceCustomize : UserControl
     {
+        AretinoAppleJuice itemTemp;
+
         public ArentinoAppleJuiceCustomize()
         {
             InitializeComponent();

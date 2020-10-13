@@ -16,8 +16,6 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class GardenOrcOmelette : Entree, IOrderItem, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -41,8 +39,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 broccoli = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Broccoli"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Broccoli"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 
@@ -59,8 +57,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 mushrooms = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Mushrooms"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Mushrooms"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 
@@ -77,8 +75,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 tomato = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Tomato"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Tomato"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 
@@ -95,8 +93,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 cheddar = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Cheddar"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Cheddar"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 

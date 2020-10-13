@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -23,6 +24,8 @@ namespace PointOfSale
         public MainWindow()
         {
             InitializeComponent();
+            var order = new Order();
+            DataContext = order;
         }
 
         public void SwapScreen(UIElement ui)

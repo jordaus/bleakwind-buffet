@@ -13,6 +13,12 @@ namespace BleakwindBuffet.Data
 {
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
+        public Combo(Entree e, Side s, Drink d)
+        {
+            drink = d;
+            side = s;
+            entree = e;
+        }
         /// <summary>
         /// Event for all classes
         /// </summary>

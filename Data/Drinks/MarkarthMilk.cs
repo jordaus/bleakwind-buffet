@@ -88,9 +88,9 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                OnPropertyChanged(("Size"));
+                OnPropertyChanged(("Price"));
+                OnPropertyChanged(("Calories"));
             }
         }
 
@@ -107,8 +107,8 @@ namespace BleakwindBuffet.Data.Drinks
             set
             {
                 ice = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Ice"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Ice"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 

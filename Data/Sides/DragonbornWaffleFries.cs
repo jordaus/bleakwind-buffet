@@ -14,8 +14,6 @@ namespace BleakwindBuffet.Data.Sides
 {
     public class DragonbornWaffleFries : Side, IOrderItem, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         /// <summary>
         /// Price for side
         /// </summary>
@@ -79,9 +77,9 @@ namespace BleakwindBuffet.Data.Sides
             set
             {
                 size = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Size"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Price"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Calories"));
+                OnPropertyChanged(("Size"));
+                OnPropertyChanged(("Price"));
+                OnPropertyChanged(("Calories"));
             }
         }
 

@@ -8,14 +8,16 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using BleakwindBuffet.Data.Interface;
+using System.ComponentModel;
 
 namespace BleakwindBuffet.Data.Drinks
 {
     /// <summary>
     /// A basic class representing the common properties of drinks
     /// </summary>
-    public abstract class Drink : IOrderItem
+    public abstract class Drink : IOrderItem, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// size of the drink
         /// </summary>
@@ -38,5 +40,10 @@ namespace BleakwindBuffet.Data.Drinks
         /// special instructions for the drink
         /// </summary>
         public abstract List<string> SpecialInstructions { get; }
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

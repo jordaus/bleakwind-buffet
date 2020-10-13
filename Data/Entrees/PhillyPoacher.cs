@@ -16,8 +16,6 @@ namespace BleakwindBuffet.Data.Entrees
     /// </summary>
     public class PhillyPoacher : Entree, IOrderItem, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
         /// <summary>
         /// Gets the price of the burger
         /// </summary>
@@ -41,8 +39,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 sirloin = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Sirloin"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Sirloin"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 
@@ -59,8 +57,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 onion = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Onion"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Onion"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 
@@ -77,8 +75,8 @@ namespace BleakwindBuffet.Data.Entrees
             set
             {
                 roll = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Roll"));
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SpecialInstructions"));
+                OnPropertyChanged(("Roll"));
+                OnPropertyChanged(("SpecialInstructions"));
             }
         }
 
