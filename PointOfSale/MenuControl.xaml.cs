@@ -17,6 +17,7 @@ using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Enums;
+using BleakwindBuffet.Data;
 
 namespace PointOfSale
 {
@@ -34,7 +35,12 @@ namespace PointOfSale
         {
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new BriarheartBurgerCustomization();
-            screen.DataContext = new BriarheartBurger();
+            var bb = new BriarheartBurger();
+            screen.DataContext = bb;
+            if(DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 

@@ -82,6 +82,9 @@
       <DependentUpon>OrderSummaryControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ParentScreen.cs" />
+    <Compile Include="PaymentOptions.xaml.cs">
+      <DependentUpon>PaymentOptions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PhillyPoacherCustomize.xaml.cs">
       <DependentUpon>PhillyPoacherCustomize.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OrderSummaryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaymentOptions.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
