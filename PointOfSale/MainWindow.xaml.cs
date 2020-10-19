@@ -32,5 +32,14 @@ namespace PointOfSale
         {
             buttonColumn.Child = ui;
         }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            if(e.Source is Button button && button.Name == "CancelOrder")
+            {
+                var freshOrder = new Order();
+                DataContext = freshOrder;
+            }
+        }
     }
 }

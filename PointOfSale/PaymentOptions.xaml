@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="930">
-    <Grid Background="Blue">
-        <Label Margin="275,0,272,382" FontSize="30">Choose A Payment Method:</Label>
-        <Button FontSize="20" Content="Credit/Debit Card" Margin="339,136,342,259"></Button>
-        <Button FontSize="20" Content="Cash" Margin="339,215,342,180"></Button>
-        <Button FontSize="20" Content="Go Back" Margin="339,303,342,92"></Button>
-    </Grid>
+    <StackPanel Background="Blue">
+        <Label  FontSize="30">Choose A Payment Method:</Label>
+        <Button FontSize="20" Content="Credit/Debit Card" ></Button>
+        <Button FontSize="20" Content="Cash" ></Button>
+        <Button Click="Back_Click" FontSize="20" Content="Go Back" ></Button>
+    </StackPanel>
 </UserControl>

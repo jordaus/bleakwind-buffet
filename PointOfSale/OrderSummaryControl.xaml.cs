@@ -44,9 +44,6 @@ namespace PointOfSale
             orderControl.SwapScreen(screen);
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

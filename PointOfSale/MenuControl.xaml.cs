@@ -49,6 +49,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new DoubleDragurCustomization();
             screen.DataContext = new DoubleDraugr();
+            var bb = new DoubleDraugr();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);  
         }
 
@@ -57,6 +63,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new ThalmorTripleCustomization();
             screen.DataContext = new ThalmorTriple();
+            var bb = new ThalmorTriple();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -73,6 +85,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new GardenOrcOmeletteCustomization();
             screen.DataContext = new GardenOrcOmelette();
+            var bb = new GardenOrcOmelette();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -81,6 +99,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new PhillyPoacherCustomize();
             screen.DataContext = new PhillyPoacher();
+            var bb = new PhillyPoacher();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -89,6 +113,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new ThugsTBoneCustomize();
             screen.DataContext = new ThugsTBone();
+            var bb = new ThugsTBone();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -97,6 +127,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new SailorSodaCustomize();
             screen.DataContext = new SailorSoda();
+            var bb = new SailorSoda();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -105,6 +141,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new MarkarthMilkCustomize();
             screen.DataContext = new MarkarthMilk();
+            var bb = new MarkarthMilk();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -113,6 +155,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new ArentinoAppleJuiceCustomize();
             screen.DataContext = new AretinoAppleJuice();
+            var bb = new AretinoAppleJuice();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -121,6 +169,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new CandlehearthCoffeeCustomize();
             screen.DataContext = new CandlehearthCoffee();
+            var bb = new CandlehearthCoffee();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -129,6 +183,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new WarriorWaterCustomize();
             screen.DataContext = new WarriorWater();
+            var bb = new WarriorWater();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -137,6 +197,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new VokunSaladCustomize();
             screen.DataContext = new VokunSalad();
+            var bb = new VokunSalad();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -145,6 +211,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new FriedMiraakCustomize();
             screen.DataContext = new FriedMiraak();
+            var bb = new FriedMiraak();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -153,6 +225,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new MadOtarGritsCustomize();
             screen.DataContext = new MadOtarGrits();
+            var bb = new MadOtarGrits();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
 
@@ -161,6 +239,12 @@ namespace PointOfSale
             var orderControl = this.FindAncestor<MainWindow>();
             var screen = new DragonbornWaffleFriesCustomize();
             screen.DataContext = new DragonbornWaffleFries();
+            var bb = new DragonbornWaffleFries();
+            screen.DataContext = bb;
+            if (DataContext is Order order)
+            {
+                order.Add(bb);
+            }
             orderControl.SwapScreen(screen);
         }
     }

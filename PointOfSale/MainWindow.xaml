@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Bleakwind Buffet Point Of Sale" Height="450" Width="930">
     <!--Main Design Frame-->
-    <Grid
+    <Grid ButtonBase.Click="Cancel_Click"
         Background="Blue">
         <!--Measurments for Rows and Columns-->
         <Grid.ColumnDefinitions>

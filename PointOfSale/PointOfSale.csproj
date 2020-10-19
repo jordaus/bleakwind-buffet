@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="RoundRegister">
+      <HintPath>..\RoundRegister.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -61,6 +64,7 @@
     <Compile Include="CandlehearthCoffeeCustomize.xaml.cs">
       <DependentUpon>CandlehearthCoffeeCustomize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CashRegisterModelView.cs" />
     <Compile Include="ChildScreen.cs" />
     <Compile Include="DragonbornWaffleFriesCustomize.xaml.cs">
       <DependentUpon>DragonbornWaffleFriesCustomize.xaml</DependentUpon>
