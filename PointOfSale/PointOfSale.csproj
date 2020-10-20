@@ -107,6 +107,9 @@
     <Compile Include="ThugsTBoneCustomize.xaml.cs">
       <DependentUpon>ThugsTBoneCustomize.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TransactionControl.xaml.cs">
+      <DependentUpon>TransactionControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VokunSaladCustomize.xaml.cs">
       <DependentUpon>VokunSaladCustomize.xaml</DependentUpon>
     </Compile>
@@ -196,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ThugsTBoneCustomize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransactionControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
