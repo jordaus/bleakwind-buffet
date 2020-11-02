@@ -7,8 +7,24 @@ using RoundRegister;
 
 namespace PointOfSale
 {
-    class CashRegisterModelView
+    public class CashRegisterModelView
     {
-        
+        public int Pennies;
+
+        public int Nickles;
+
+        public int Dimes;
+
+        public int Quarters;
+
+        public int Dollars;
+
+        public int HalfDollars;
+
+        public int Ones;
+
+        public int Twos;
+
+
     }
 }
