@@ -22,6 +22,43 @@
     </p>
     <p>Any purchase that contains an Entree, Side and Drink will result in a $1 discount.</p>
 
+    <div id="search">
+        <input type="text" name="SearchTerms"/>
+        <input type="submit" value="Search">
+    </div>
+
+    <div id="filters">
+        <h4>Order Item</h4>
+        <label>
+            <input type="checkbox" name="entreecheck" />
+            Entree
+        </label> 
+        <label>
+            <input type="checkbox" name="sidecheck" />
+            Side
+        </label>
+        <label>
+            <input type="checkbox" name="drinkcheck" />
+            Drink
+        </label>
+
+        <h4>Calories</h4>
+        <div>
+            Between
+            <input name="CalMin" type="number" min="0" max="2000" step="1" placeholder="min" />
+            and
+            <input name="CalMax" type="number" min="0" max="2000" step="1" placeholder="max" />
+        </div>
+
+        <h4>Price</h4>
+        <div>
+            Between
+            <input name="PriceMin" type="number" min="0" max="20.0" step="0.1" placeholder="min" />
+            and
+            <input name="PriceMax" type="number" min="0" max="20.0" step="0.1" placeholder="max" />
+        </div>
+    </div>
+
     <div class="row">
         <div class="column">
             <h2>Entrees</h2>
@@ -39,7 +76,7 @@
             @foreach (Entree e in Menu.Entrees())
             {
                 <div class="MainItem">@e.ToString()</div>
-                <div>Price: @e.Price</div>
+                <div>Price: $@e.Price</div>
                 <div>Calories: @e.Calories</div>
             }
         </div>
@@ -49,7 +86,7 @@
                 <div class="MainItem">@s.ToString()</div>
                 @foreach (Size size in Enum.GetValues(typeof(Size)))
                 {
-                    <div>Price: @s.Price</div>
+                    <div>Price: $@s.Price</div>
                     <div>Calories: @s.Calories</div>
                 }
             }
@@ -60,7 +97,7 @@
                 <div class="MainItem">@d.ToString()</div>
                 @foreach (Size size in Enum.GetValues(typeof(Size)))
                 {
-                    <div>Price: @d.Price</div>
+                    <div>Price: $@d.Price</div>
                     <div>Calories: @d.Calories</div>
                 }
             }
