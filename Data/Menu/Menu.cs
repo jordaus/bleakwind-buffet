@@ -12,6 +12,7 @@ using BleakwindBuffet.Data.Entrees;
 using BleakwindBuffet.Data.Drinks;
 using BleakwindBuffet.Data.Sides;
 using BleakwindBuffet.Data.Enums;
+using System.Linq;
 
 namespace BleakwindBuffet.Data.Menu
 {
@@ -146,6 +147,60 @@ namespace BleakwindBuffet.Data.Menu
             menuList.AddRange(Sides());
 
             return menuList;
+        }
+        
+        public static IEnumerable<IOrderItem> Search(string terms)
+        {
+            List<IOrderItem> Food = new List<IOrderItem>();
+            if(terms == null)
+            {
+                return FullMenu();
+            }
+
+            foreach(IOrderItem io in FullMenu())
+            {
+                if (io.ToString().Contains(terms))
+                {
+                    Food.Add(io);
+                }
+            }
+
+            return Food;
+        }
+
+        public static string[] FoodType
+        {
+            get => new string[]
+            {
+                "Entree",
+                "Side",
+                "Drink"
+            };
+        }
+
+        public static IEnumerable<IOrderItem> FilterByFoodType(IEnumerable<IOrderItem> food, IEnumerable<string> type)
+        {
+            if (type == null || type.Count() == 0) return food;
+
+            List<IOrderItem> Order = new List<IOrderItem>();
+
+            foreach(IOrderItem io in food)
+            {
+                if(io is Entree e && type.Contains("Entree"))
+                {
+                    Order.Add(io);
+                }
+                else if(io is Drink && type.Contains("Drink"))
+                {
+                    Order.Add(io);
+                }
+                else if(io is Side && type.Contains("Side"))
+                {
+                    Order.Add(io);
+                }
+            }
+
+            return Order;
         }
     }
 }

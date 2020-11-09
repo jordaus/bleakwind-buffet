@@ -17,7 +17,7 @@ namespace Website.Pages
             _logger = logger;
         }
 
-        public void OnGet()
+        public void OnGet(string SearchTerms, string[] FoodType, double? PriceMin, double? PriceMax, int? CalMin, int? CalMax)
         {
 
         }
