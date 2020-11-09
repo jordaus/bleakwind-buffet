@@ -38,32 +38,42 @@
         <div class="column">
             @foreach (Entree e in Menu.Entrees())
             {
-                <div>e.ToString</div>
-                <div>e.Price</div>
-                <div>e.Calories</div>
+                <div class="MainItem">@e.ToString()</div>
+                <div>Price: @e.Price</div>
+                <div>Calories: @e.Calories</div>
             }
         </div>
         <div class="column">
             @foreach (Side s in Menu.Sides())
             {
-                <div>s.ToString</div>
+                <div class="MainItem">@s.ToString()</div>
                 @foreach (Size size in Enum.GetValues(typeof(Size)))
                 {
-                    <div>s.Price</div>
-                    <div>s.Calories</div>
+                    <div>Price: @s.Price</div>
+                    <div>Calories: @s.Calories</div>
                 }
             }
         </div>
         <div class="column">
             @foreach (Drink d in Menu.Drinks())
             {
-                <div>d.ToString</div>
+                <div class="MainItem">@d.ToString()</div>
                 @foreach (Size size in Enum.GetValues(typeof(Size)))
                 {
-                    <div>d.Price</div>
-                    <div>d.Calories</div>
+                    <div>Price: @d.Price</div>
+                    <div>Calories: @d.Calories</div>
                 }
             }
+        </div>
+
+        <div class="column">
+            <div class="MainItem"> Soda Flavors </div>
+            <div> Blackberry </div>
+            <div> Cherry </div>
+            <div> Grapefruit </div>
+            <div> Lemon </div>
+            <div> Peach </div>
+            <div> Watermelon </div>
         </div>
     </div>
 
