@@ -149,6 +149,11 @@ namespace BleakwindBuffet.Data.Menu
             return menuList;
         }
         
+        /// <summary>
+        /// Search engine for website
+        /// </summary>
+        /// <param name="terms">string parametr</param>
+        /// <returns>search results</returns>
         public static IEnumerable<IOrderItem> Search(string terms)
         {
             List<IOrderItem> Food = new List<IOrderItem>();
@@ -168,6 +173,9 @@ namespace BleakwindBuffet.Data.Menu
             return Food;
         }
 
+        /// <summary>
+        /// just a list for types of food
+        /// </summary>
         public static string[] FoodType
         {
             get => new string[]
@@ -178,6 +186,12 @@ namespace BleakwindBuffet.Data.Menu
             };
         }
 
+        /// <summary>
+        /// filters website by type of food
+        /// </summary>
+        /// <param name="food">food list</param>
+        /// <param name="type">type parameter</param>
+        /// <returns>returns food results</returns>
         public static IEnumerable<IOrderItem> FilterByFoodType(IEnumerable<IOrderItem> food, IEnumerable<string> type)
         {
             if (type == null || type.Count() == 0) return food;
@@ -202,5 +216,87 @@ namespace BleakwindBuffet.Data.Menu
 
             return Order;
         }
+
+        /// <summary>
+        /// Filters the website by calories
+        /// </summary>
+        /// <param name="food">food list</param>
+        /// <param name="min">min param</param>
+        /// <param name="max">max param</param>
+        /// <returns>returns calories filter</returns>
+        public static IEnumerable<IOrderItem> FilterByCalories(IEnumerable<IOrderItem> food, int? min, int? max)
+        {
+            if (min == null && max == null) return food;
+            var results = new List<IOrderItem>();
+
+            if(min == null)
+            {
+                foreach(IOrderItem io in food)
+                {
+                    if (io.Calories <= max) results.Add(io);
+                }
+                return results;
+            }
+
+            if(max == null)
+            {
+                foreach(IOrderItem io in food)
+                {
+                    if (io.Calories >= min) results.Add(io);
+                }
+                return results;
+            }
+
+            foreach(IOrderItem io in food)
+            {
+                if(io.Calories >= min && io.Calories <= max)
+                {
+                    results.Add(io);
+                }
+            }
+            return results;
+        }
+
+        /// <summary>
+        /// Filters the website by price
+        /// </summary>
+        /// <param name="food">food list</param>
+        /// <param name="min">min param</param>
+        /// <param name="max">max param</param>
+        /// <returns>returns price filter</returns>
+        public static IEnumerable<IOrderItem> FilterByPrice(IEnumerable<IOrderItem> food, double? min, double? max)
+        {
+            if (min == null && max == null) return food;
+            var results = new List<IOrderItem>();
+
+            if (min == null)
+            {
+                foreach (IOrderItem io in food)
+                {
+                    if (io.Price <= max) results.Add(io);
+                }
+                return results;
+            }
+
+            if (max == null)
+            {
+                foreach (IOrderItem io in food)
+                {
+                    if (io.Price >= min) results.Add(io);
+                }
+                return results;
+            }
+
+            foreach (IOrderItem io in food)
+            {
+                if (io.Price >= min && io.Price <= max)
+                {
+                    results.Add(io);
+                }
+            }
+            return results;
+        }
     }
+
+
 }
