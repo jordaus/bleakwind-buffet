@@ -19,14 +19,12 @@ namespace Website.Pages
         private readonly ILogger<IndexModel> _logger;
 
         public IEnumerable<IOrderItem> Order { get; set; }
-
         public string SearchTerms { get; set; }
-
-        public List<IOrderItem> Entree { get; set; }
-
-        public List<IOrderItem> Side { get; set; }
-
-        public List<IOrderItem> Drink { get; set; }
+        public string[] FoodType { get; set; } = new string[0];
+        public double PriceMax { get; set; }
+        public double PriceMin { get; set; }
+        public int CalMin { get; set; }
+        public int CalMax { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
         {
@@ -40,25 +38,7 @@ namespace Website.Pages
             Order = Menu.FilterByCalories(Order, CalMin, CalMax);
             Order = Menu.FilterByPrice(Order, PriceMin, PriceMax);
 
-            Entree = new List<IOrderItem>();
-            Drink = new List<IOrderItem>();
-            Side = new List<IOrderItem>();
 
-            foreach(IOrderItem item in Order)
-            {
-                if(item is BleakwindBuffet.Data.Entrees.Entree)
-                {
-                    Entree.Add(item);
-                }
-                if (item is BleakwindBuffet.Data.Sides.Side)
-                {
-                    Side.Add(item);
-                }
-                if (item is BleakwindBuffet.Data.Drinks.Drink)
-                {
-                    Drink.Add(item);
-                }
-            }
         }
     }
 }

@@ -22,42 +22,45 @@
     </p>
     <p>Any purchase that contains an Entree, Side and Drink will result in a $1 discount.</p>
 
-    <div id="search">
-        <input type="text" name="SearchTerms"/>
-        <input type="submit" value="Search">
-    </div>
-
-    <div id="filters">
-        <h4>Order Item</h4>
-        <label>
-            <input type="checkbox" name="entreecheck" />
-            Entree
-        </label> 
-        <label>
-            <input type="checkbox" name="sidecheck" />
-            Side
-        </label>
-        <label>
-            <input type="checkbox" name="drinkcheck" />
-            Drink
-        </label>
-
-        <h4>Calories</h4>
-        <div>
-            Between
-            <input name="CalMin" type="number" min="0" max="2000" step="1" placeholder="min" />
-            and
-            <input name="CalMax" type="number" min="0" max="2000" step="1" placeholder="max" />
+    <form>
+        <div id="search">
+            <input type="text" name="SearchTerms" />
+            <input type="submit" value="Search">
         </div>
 
-        <h4>Price</h4>
-        <div>
-            Between
-            <input name="PriceMin" type="number" min="0" max="20.0" step="0.01" placeholder="min" />
-            and
-            <input name="PriceMax" type="number" min="0" max="20.0" step="0.01" placeholder="max" />
+        <div id="filters">
+            <h4>Order Item</h4>
+            <label>
+                <input type="checkbox" name="entreecheck" />
+                Entree
+            </label>
+            <label>
+                <input type="checkbox" name="sidecheck" />
+                Side
+            </label>
+            <label>
+                <input type="checkbox" name="drinkcheck" />
+                Drink
+            </label>
+
+            <h4>Calories</h4>
+            <div>
+                Between
+                <input name="CalMin" type="number" min="0" max="2000" step="1" placeholder="min" />
+                and
+                <input name="CalMax" type="number" min="0" max="2000" step="1" placeholder="max" />
+            </div>
+
+            <h4>Price</h4>
+            <div>
+                Between
+                <input name="PriceMin" type="number" min="0" max="20.0" step="0.01" placeholder="min" />
+                and
+                <input name="PriceMax" type="number" min="0" max="20.0" step="0.01" placeholder="max" />
+            </div>
         </div>
-    </div>
+    </form>
+    
 
     <div class="row">
         <div class="column">
@@ -73,7 +76,7 @@
 
     <div class="row">
         <div class="column">
-            @foreach (Entree e in Menu.Entrees())
+            @foreach (Entree e in Model.Entree)
             {
                 <div class="MainItem">@e.ToString()</div>
                 <div>Price: $@e.Price</div>
@@ -81,7 +84,7 @@
             }
         </div>
         <div class="column">
-            @foreach (Side s in Menu.Sides())
+            @foreach (Side s in Model.Side)
             {
                 <div class="MainItem">@s.ToString()</div>
                 @foreach (Size size in Enum.GetValues(typeof(Size)))
@@ -92,7 +95,7 @@
             }
         </div>
         <div class="column">
-            @foreach (Drink d in Menu.Drinks())
+            @foreach (Drink d in Model.Drink)
             {
                 <div class="MainItem">@d.ToString()</div>
                 @foreach (Size size in Enum.GetValues(typeof(Size)))
