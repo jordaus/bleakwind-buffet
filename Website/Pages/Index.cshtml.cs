@@ -26,6 +26,12 @@ namespace Website.Pages
         public int CalMin { get; set; }
         public int CalMax { get; set; }
 
+        public List<IOrderItem> Entree { get; set; }
+
+        public List<IOrderItem> Drink { get; set; }
+
+        public List<IOrderItem> Side { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
@@ -38,7 +44,25 @@ namespace Website.Pages
             Order = Menu.FilterByCalories(Order, CalMin, CalMax);
             Order = Menu.FilterByPrice(Order, PriceMin, PriceMax);
 
+            Entree = new List<IOrderItem>();
+            Drink = new List<IOrderItem>();
+            Side = new List<IOrderItem>();
 
+            foreach (IOrderItem item in Order)
+            {
+                if (item is BleakwindBuffet.Data.Entrees.Entree)
+                {
+                    Entree.Add(item);
+                }
+                if (item is BleakwindBuffet.Data.Sides.Side)
+                {
+                    Side.Add(item);
+                }
+                if (item is BleakwindBuffet.Data.Drinks.Drink)
+                {
+                    Drink.Add(item);
+                }
+            }
         }
     }
 }
