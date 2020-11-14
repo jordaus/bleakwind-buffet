@@ -18,6 +18,16 @@ namespace BleakwindBuffet.Data.Sides
     public class FriedMiraak : Side, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
+        /// Description of item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Perfectly prepared hash brown pancakes.";
+            }
+        }
+        /// <summary>
         /// Price for side
         /// </summary>
         /// <exception cref="System.NotImplementedException">

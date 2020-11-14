@@ -18,6 +18,16 @@ namespace BleakwindBuffet.Data.Sides
     public class VokunSalad : Side, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
+        /// Description of item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "A seasonal fruit salad of mellons, berries, mango, grape, apple, and oranges.";
+            }
+        }
+        /// <summary>
         /// Price for side
         /// </summary>
         /// <exception cref="System.NotImplementedException">

@@ -18,6 +18,16 @@ namespace BleakwindBuffet.Data.Sides
     public class MadOtarGrits : Side, IOrderItem, INotifyPropertyChanged
     {
         /// <summary>
+        /// Description of item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "Cheesey Grits.";
+            }
+        }
+        /// <summary>
         /// Price for side
         /// </summary>
         /// <exception cref="System.NotImplementedException">

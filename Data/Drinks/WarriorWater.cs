@@ -97,6 +97,17 @@ namespace BleakwindBuffet.Data.Drinks
         }
 
         /// <summary>
+        /// Description of item
+        /// </summary>
+        public override string Description
+        {
+            get
+            {
+                return "It’s water. Just water.";
+            }
+        }
+
+        /// <summary>
         /// Sees if theres Ice added
         /// </summary>
         private bool ice = true;

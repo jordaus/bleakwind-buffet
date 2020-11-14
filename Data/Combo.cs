@@ -13,6 +13,8 @@ namespace BleakwindBuffet.Data
 {
     public class Combo : IOrderItem, INotifyPropertyChanged
     {
+        public string Description { get { return ""; } }
+
         public Combo(Entree e, Side s, Drink d)
         {
             drink = d;
