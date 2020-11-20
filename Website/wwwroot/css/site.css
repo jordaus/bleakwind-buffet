@@ -80,4 +80,15 @@ div.MainItem{
     font-weight: bold;
 }
 
+.float-columns {
+    display: flex;
+    flex-direction: row;
+}
+
+@media(max-width : 490px){
+    .float-columns{
+        flex-direction: column;
+    }
+}
+
 

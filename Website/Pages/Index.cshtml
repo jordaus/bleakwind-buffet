@@ -12,7 +12,7 @@
 @using BleakwindBuffet.Data.Interface;
 
 <title>Home Page</title>
-<div class="text-center">
+<div class="flex-row">
     <h1 class="display-4">Bleakwind Buffet</h1>
     <p>
         We at Bleakwind Buffet are proud to bring you authentic fantasy meals straight from the world of Skyrim.
@@ -60,64 +60,52 @@
             </div>
         </div>
     </form>
-    
-
-    <div class="row">
-        <div class="column">
-            <h2>Entrees</h2>
-        </div>
-        <div class="column">
-            <h2>Sides</h2>
-        </div>
-        <div class="column">
-            <h2>Drinks</h2>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column">
-            @foreach (Entree e in Model.Entree)
-            {
-                <div class="MainItem">@e.ToString()</div>
-                <div>Price: $@e.Price</div>
-                <div>Calories: @e.Calories</div>
-                <div>Desc: @e.Description</div>
-            }
-        </div>
-        <div class="column">
-            @foreach (Side s in Model.Side)
-            {
-                <div class="MainItem">@s.ToString()</div>
-                @foreach (Size size in Enum.GetValues(typeof(Size)))
-                {
-                    <div>Price: $@s.Price</div>
-                    <div>Calories: @s.Calories</div>
-                    <div>Desc: @s.Description</div>
-                }
-            }
-        </div>
-        <div class="column">
-            @foreach (Drink d in Model.Drink)
-            {
-                <div class="MainItem">@d.ToString()</div>
-                @foreach (Size size in Enum.GetValues(typeof(Size)))
-                {
-                    <div>Price: $@d.Price</div>
-                    <div>Calories: @d.Calories</div>
-                    <div>Desc: @d.Description</div>
-                }
-            }
-        </div>
-
-        <div class="column">
-            <div class="MainItem"> Soda Flavors </div>
-            <div> Blackberry </div>
-            <div> Cherry </div>
-            <div> Grapefruit </div>
-            <div> Lemon </div>
-            <div> Peach </div>
-            <div> Watermelon </div>
-        </div>
-    </div>
-
 </div>
+<div class="float-columns">
+    <div>
+        <h2>Entrees:</h2>
+        @foreach (Entree e in Model.Entree)
+        {
+            <div class="MainItem">@e.ToString()</div>
+            <div>Price: $@e.Price</div>
+            <div>Calories: @e.Calories</div>
+            <div class="desc">Desc: @e.Description</div>
+        }
+    </div>
+    <div>
+        <h2>Sides:</h2>
+        @foreach (Side s in Model.Side)
+        {
+            <div class="MainItem">@s.ToString()</div>
+            @foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                <div>Price: $@s.Price</div>
+                <div>Calories: @s.Calories</div>
+            }
+            <div class="desc">Desc: @s.Description</div>
+        }
+    </div>
+    <div>
+        <h2>Drinks:</h2>
+        @foreach (Drink d in Model.Drink)
+        {
+            <div class="MainItem">@d.ToString()</div>
+            @foreach (Size size in Enum.GetValues(typeof(Size)))
+            {
+                <div>Price: $@d.Price</div>
+                <div>Calories: @d.Calories</div>
+            }
+            <div class="desc">Desc: @d.Description</div>
+        }
+    </div>
+</div>
+
+    <div class="float-columns">
+        <div class="MainItem"> Soda Flavors </div>
+        <div> Blackberry </div>
+        <div> Cherry </div>
+        <div> Grapefruit </div>
+        <div> Lemon </div>
+        <div> Peach </div>
+        <div> Watermelon </div>
+    </div>
